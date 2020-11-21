@@ -1,0 +1,2674 @@
+0 1 has taken a fork
+0 1 has taken a fork
+0 1 eating
+0 2 has taken a fork
+0 2 has taken a fork
+0 2 eating
+150 1 sleeping
+150 2 sleeping
+150 3 has taken a fork
+150 3 has taken a fork
+150 3 eating
+150 4 has taken a fork
+151 4 has taken a fork
+151 4 eating
+305 1 thinking
+305 2 thinking
+305 3 sleeping
+305 4 sleeping
+305 1 has taken a fork
+305 1 has taken a fork
+305 1 eating
+305 2 has taken a fork
+305 2 has taken a fork
+305 2 eating
+457 3 thinking
+457 4 thinking
+457 2 sleeping
+457 1 sleeping
+457 3 has taken a fork
+457 3 has taken a fork
+457 3 eating
+457 4 has taken a fork
+457 4 has taken a fork
+457 4 eating
+607 2 thinking
+607 1 thinking
+607 3 sleeping
+607 4 sleeping
+607 2 has taken a fork
+607 2 has taken a fork
+607 2 eating
+607 1 has taken a fork
+607 1 has taken a fork
+607 1 eating
+755 3 thinking
+755 4 thinking
+755 2 sleeping
+755 1 sleeping
+755 3 has taken a fork
+755 3 has taken a fork
+755 3 eating
+755 4 has taken a fork
+755 4 has taken a fork
+755 4 eating
+901 4 sleeping
+904 2 thinking
+904 1 thinking
+904 3 sleeping
+904 2 has taken a fork
+904 2 has taken a fork
+904 2 eating
+904 1 has taken a fork
+904 1 has taken a fork
+904 1 eating
+1052 4 thinking
+1055 3 thinking
+1055 2 sleeping
+1055 1 sleeping
+1055 4 has taken a fork
+1055 4 has taken a fork
+1055 4 eating
+1055 3 has taken a fork
+1055 3 has taken a fork
+1055 3 eating
+1206 1 thinking
+1206 2 thinking
+1206 3 sleeping
+1206 4 sleeping
+1206 1 has taken a fork
+1206 1 has taken a fork
+1206 1 eating
+1206 2 has taken a fork
+1206 2 has taken a fork
+1206 2 eating
+1355 4 thinking
+1356 1 sleeping
+1356 4 has taken a fork
+1356 4 has taken a fork
+1356 4 eating
+1356 3 thinking
+1360 2 sleeping
+1360 3 has taken a fork
+1360 3 has taken a fork
+1360 3 eating
+1505 1 thinking
+1505 3 sleeping
+1505 4 sleeping
+1505 2 thinking
+1505 1 has taken a fork
+1505 1 has taken a fork
+1505 1 eating
+1505 2 has taken a fork
+1505 2 has taken a fork
+1505 2 eating
+1654 2 sleeping
+1656 3 thinking
+1656 3 has taken a fork
+1656 3 has taken a fork
+1656 3 eating
+1656 4 thinking
+1656 1 sleeping
+1656 4 has taken a fork
+1656 4 has taken a fork
+1656 4 eating
+1803 1 thinking
+1803 4 sleeping
+1803 1 has taken a fork
+1803 1 has taken a fork
+1803 1 eating
+1809 3 sleeping
+1809 2 thinking
+1809 2 has taken a fork
+1809 2 has taken a fork
+1809 2 eating
+1953 4 thinking
+1953 1 sleeping
+1953 4 has taken a fork
+1953 4 has taken a fork
+1953 4 eating
+1956 3 thinking
+1956 2 sleeping
+1956 3 has taken a fork
+1956 3 has taken a fork
+1957 3 eating
+2105 2 thinking
+2106 3 sleeping
+2106 1 thinking
+2106 4 sleeping
+2106 2 has taken a fork
+2106 2 has taken a fork
+2106 2 eating
+2106 1 has taken a fork
+2106 1 has taken a fork
+2106 1 eating
+2256 4 thinking
+2256 1 sleeping
+2256 4 has taken a fork
+2256 4 has taken a fork
+2256 4 eating
+2259 3 thinking
+2259 3 has taken a fork
+2259 3 has taken a fork
+2259 3 eating
+2259 2 sleeping
+2406 1 thinking
+2407 4 sleeping
+2407 3 sleeping
+2407 2 thinking
+2407 1 has taken a fork
+2407 1 has taken a fork
+2407 1 eating
+2407 2 has taken a fork
+2407 2 has taken a fork
+2407 2 eating
+2555 2 sleeping
+2555 3 thinking
+2555 3 has taken a fork
+2555 3 has taken a fork
+2555 3 eating
+2558 4 thinking
+2558 4 has taken a fork
+2558 4 has taken a fork
+2558 4 eating
+2558 1 sleeping
+2707 1 thinking
+2707 3 sleeping
+2707 1 has taken a fork
+2707 1 has taken a fork
+2707 1 eating
+2707 2 thinking
+2709 4 sleeping
+2709 2 has taken a fork
+2709 2 has taken a fork
+2709 2 eating
+2857 4 thinking
+2857 1 sleeping
+2857 2 sleeping
+2857 4 has taken a fork
+2857 4 has taken a fork
+2857 4 eating
+2859 3 thinking
+2859 3 has taken a fork
+2859 3 has taken a fork
+2859 3 eating
+3004 2 thinking
+3004 1 thinking
+3008 4 sleeping
+3009 3 sleeping
+3009 2 has taken a fork
+3009 2 has taken a fork
+3009 2 eating
+3009 1 has taken a fork
+3009 1 has taken a fork
+3009 1 eating
+3155 4 thinking
+3158 3 thinking
+3158 1 sleeping
+3160 2 sleeping
+3160 4 has taken a fork
+3160 4 has taken a fork
+3160 4 eating
+3160 3 has taken a fork
+3160 3 has taken a fork
+3160 3 eating
+3304 4 sleeping
+3305 2 thinking
+3305 2 has taken a fork
+3305 2 has taken a fork
+3305 2 eating
+3305 3 sleeping
+3305 1 thinking
+3305 1 has taken a fork
+3305 1 has taken a fork
+3305 1 eating
+3454 2 sleeping
+3454 1 sleeping
+3454 3 thinking
+3454 3 has taken a fork
+3454 3 has taken a fork
+3454 3 eating
+3455 4 thinking
+3455 4 has taken a fork
+3455 4 has taken a fork
+3455 4 eating
+3608 2 thinking
+3608 4 sleeping
+3608 2 has taken a fork
+3608 2 has taken a fork
+3608 2 eating
+3608 1 thinking
+3608 3 sleeping
+3608 1 has taken a fork
+3608 1 has taken a fork
+3608 1 eating
+3759 3 thinking
+3759 4 thinking
+3759 2 sleeping
+3759 1 sleeping
+3759 3 has taken a fork
+3759 3 has taken a fork
+3759 3 eating
+3759 4 has taken a fork
+3759 4 has taken a fork
+3759 4 eating
+3909 2 thinking
+3909 1 thinking
+3909 3 sleeping
+3909 4 sleeping
+3909 2 has taken a fork
+3909 2 has taken a fork
+3909 2 eating
+3909 1 has taken a fork
+3909 1 has taken a fork
+3909 1 eating
+4059 3 thinking
+4059 2 sleeping
+4059 1 sleeping
+4059 4 thinking
+4059 3 has taken a fork
+4059 3 has taken a fork
+4059 3 eating
+4059 4 has taken a fork
+4059 4 has taken a fork
+4059 4 eating
+4206 3 sleeping
+4210 2 thinking
+4210 2 has taken a fork
+4210 2 has taken a fork
+4210 2 eating
+4210 1 thinking
+4210 4 sleeping
+4210 1 has taken a fork
+4210 1 has taken a fork
+4210 1 eating
+4356 3 thinking
+4360 1 sleeping
+4360 2 sleeping
+4360 3 has taken a fork
+4360 3 has taken a fork
+4360 3 eating
+4360 4 thinking
+4360 4 has taken a fork
+4360 4 has taken a fork
+4360 4 eating
+4509 2 thinking
+4509 1 thinking
+4509 4 sleeping
+4509 2 has taken a fork
+4509 2 has taken a fork
+4509 2 eating
+4511 3 sleeping
+4511 1 has taken a fork
+4511 1 has taken a fork
+4511 1 eating
+4656 3 thinking
+4656 4 thinking
+4656 2 sleeping
+4656 1 sleeping
+4656 3 has taken a fork
+4656 3 has taken a fork
+4656 3 eating
+4656 4 has taken a fork
+4656 4 has taken a fork
+4656 4 eating
+4801 1 thinking
+4806 3 sleeping
+4806 4 sleeping
+4806 1 has taken a fork
+4806 1 has taken a fork
+4806 1 eating
+4806 2 thinking
+4806 2 has taken a fork
+4806 2 has taken a fork
+4806 2 eating
+4955 3 thinking
+4955 4 thinking
+4956 1 sleeping
+4956 2 sleeping
+4956 3 has taken a fork
+4956 3 has taken a fork
+4956 3 eating
+4956 4 has taken a fork
+4956 4 has taken a fork
+4956 4 eating
+5102 2 thinking
+5102 4 sleeping
+5102 2 has taken a fork
+5102 2 has taken a fork
+5102 2 eating
+5106 1 thinking
+5106 3 sleeping
+5106 1 has taken a fork
+5106 1 has taken a fork
+5106 1 eating
+5255 2 sleeping
+5255 4 thinking
+5255 1 sleeping
+5255 3 thinking
+5255 4 has taken a fork
+5255 4 has taken a fork
+5255 4 eating
+5255 3 has taken a fork
+5255 3 has taken a fork
+5255 3 eating
+5402 3 sleeping
+5406 1 thinking
+5406 1 has taken a fork
+5406 1 has taken a fork
+5406 1 eating
+5406 4 sleeping
+5406 2 thinking
+5406 2 has taken a fork
+5406 2 has taken a fork
+5406 2 eating
+5553 3 thinking
+5553 2 sleeping
+5553 3 has taken a fork
+5553 3 has taken a fork
+5553 3 eating
+5553 4 thinking
+5555 1 sleeping
+5555 4 has taken a fork
+5555 4 has taken a fork
+5555 4 eating
+5702 1 thinking
+5706 4 sleeping
+5706 1 has taken a fork
+5706 1 has taken a fork
+5706 1 eating
+5707 2 thinking
+5707 3 sleeping
+5707 2 has taken a fork
+5707 2 has taken a fork
+5707 2 eating
+5858 1 sleeping
+5858 4 thinking
+5858 3 thinking
+5858 2 sleeping
+5858 4 has taken a fork
+5858 4 has taken a fork
+5858 4 eating
+5858 3 has taken a fork
+5858 3 has taken a fork
+5858 3 eating
+6006 2 thinking
+6006 3 sleeping
+6006 2 has taken a fork
+6006 2 has taken a fork
+6006 2 eating
+6006 4 sleeping
+6006 1 thinking
+6006 1 has taken a fork
+6006 1 has taken a fork
+6006 1 eating
+6154 1 sleeping
+6156 4 thinking
+6156 3 thinking
+6156 4 has taken a fork
+6156 4 has taken a fork
+6156 4 eating
+6156 2 sleeping
+6156 3 has taken a fork
+6156 3 has taken a fork
+6156 3 eating
+6306 1 thinking
+6306 2 thinking
+6306 3 sleeping
+6306 4 sleeping
+6306 1 has taken a fork
+6306 1 has taken a fork
+6306 1 eating
+6306 2 has taken a fork
+6306 2 has taken a fork
+6306 2 eating
+6456 4 thinking
+6456 3 thinking
+6456 1 sleeping
+6456 2 sleeping
+6456 4 has taken a fork
+6456 4 has taken a fork
+6456 4 eating
+6456 3 has taken a fork
+6456 3 has taken a fork
+6456 3 eating
+6606 1 thinking
+6606 2 thinking
+6606 3 sleeping
+6606 4 sleeping
+6606 1 has taken a fork
+6606 1 has taken a fork
+6606 1 eating
+6607 2 has taken a fork
+6607 2 has taken a fork
+6607 2 eating
+6755 4 thinking
+6755 3 thinking
+6755 2 sleeping
+6755 4 has taken a fork
+6755 4 has taken a fork
+6755 4 eating
+6757 1 sleeping
+6757 3 has taken a fork
+6757 3 has taken a fork
+6757 3 eating
+6905 3 sleeping
+6907 2 thinking
+6908 2 has taken a fork
+6908 2 has taken a fork
+6908 2 eating
+6908 4 sleeping
+6908 1 thinking
+6908 1 has taken a fork
+6908 1 has taken a fork
+6908 1 eating
+7057 3 thinking
+7057 1 sleeping
+7057 4 thinking
+7057 3 has taken a fork
+7057 3 has taken a fork
+7057 3 eating
+7057 2 sleeping
+7057 4 has taken a fork
+7057 4 has taken a fork
+7057 4 eating
+7202 2 thinking
+7206 4 sleeping
+7206 1 thinking
+7206 2 has taken a fork
+7206 2 has taken a fork
+7206 2 eating
+7207 3 sleeping
+7207 1 has taken a fork
+7207 1 has taken a fork
+7207 1 eating
+7353 4 thinking
+7353 2 sleeping
+7353 1 sleeping
+7353 4 has taken a fork
+7353 4 has taken a fork
+7353 4 eating
+7356 3 thinking
+7356 3 has taken a fork
+7356 3 has taken a fork
+7356 3 eating
+7501 2 thinking
+7501 4 sleeping
+7501 2 has taken a fork
+7501 2 has taken a fork
+7501 2 eating
+7505 1 thinking
+7507 3 sleeping
+7507 1 has taken a fork
+7507 1 has taken a fork
+7507 1 eating
+7651 2 sleeping
+7656 4 thinking
+7656 4 has taken a fork
+7656 4 has taken a fork
+7656 4 eating
+7656 3 thinking
+7656 1 sleeping
+7656 3 has taken a fork
+7656 3 has taken a fork
+7656 3 eating
+7801 2 thinking
+7801 1 thinking
+7808 3 sleeping
+7808 4 sleeping
+7808 2 has taken a fork
+7808 2 has taken a fork
+7808 2 eating
+7808 1 has taken a fork
+7808 1 has taken a fork
+7808 1 eating
+7956 1 sleeping
+7956 3 thinking
+7956 3 has taken a fork
+7956 3 has taken a fork
+7956 3 eating
+7958 4 thinking
+7958 4 has taken a fork
+7958 4 has taken a fork
+7958 4 eating
+7958 2 sleeping
+8106 3 sleeping
+8106 1 thinking
+8106 1 has taken a fork
+8106 1 has taken a fork
+8106 1 eating
+8106 2 thinking
+8106 4 sleeping
+8106 2 has taken a fork
+8106 2 has taken a fork
+8106 2 eating
+8251 4 thinking
+8257 2 sleeping
+8257 3 thinking
+8257 4 has taken a fork
+8257 4 has taken a fork
+8257 4 eating
+8257 1 sleeping
+8257 3 has taken a fork
+8257 3 has taken a fork
+8257 3 eating
+8405 3 sleeping
+8405 1 thinking
+8405 1 has taken a fork
+8405 1 has taken a fork
+8405 1 eating
+8408 2 thinking
+8408 4 sleeping
+8408 2 has taken a fork
+8408 2 has taken a fork
+8408 2 eating
+8553 1 sleeping
+8554 3 thinking
+8554 3 has taken a fork
+8554 3 has taken a fork
+8554 3 eating
+8554 2 sleeping
+8560 4 thinking
+8560 4 has taken a fork
+8560 4 has taken a fork
+8560 4 eating
+8703 3 sleeping
+8703 2 thinking
+8703 1 thinking
+8703 2 has taken a fork
+8703 2 has taken a fork
+8703 2 eating
+8706 4 sleeping
+8706 1 has taken a fork
+8706 1 has taken a fork
+8706 1 eating
+8853 3 thinking
+8855 4 thinking
+8856 2 sleeping
+8856 1 sleeping
+8856 3 has taken a fork
+8856 3 has taken a fork
+8856 3 eating
+8856 4 has taken a fork
+8856 4 has taken a fork
+8856 4 eating
+9003 1 thinking
+9005 3 sleeping
+9005 1 has taken a fork
+9005 1 has taken a fork
+9005 1 eating
+9007 4 sleeping
+9009 2 thinking
+9009 2 has taken a fork
+9009 2 has taken a fork
+9009 2 eating
+9152 4 thinking
+9156 1 sleeping
+9156 3 thinking
+9156 4 has taken a fork
+9156 4 has taken a fork
+9156 4 eating
+9156 2 sleeping
+9156 3 has taken a fork
+9156 3 has taken a fork
+9156 3 eating
+9304 2 thinking
+9304 4 sleeping
+9304 3 sleeping
+9304 2 has taken a fork
+9304 2 has taken a fork
+9304 2 eating
+9309 1 thinking
+9309 1 has taken a fork
+9309 1 has taken a fork
+9309 1 eating
+9456 3 thinking
+9456 4 thinking
+9456 2 sleeping
+9456 1 sleeping
+9456 3 has taken a fork
+9456 3 has taken a fork
+9456 3 eating
+9456 4 has taken a fork
+9456 4 has taken a fork
+9456 4 eating
+9601 1 thinking
+9606 2 thinking
+9606 4 sleeping
+9606 3 sleeping
+9606 1 has taken a fork
+9606 1 has taken a fork
+9606 1 eating
+9606 2 has taken a fork
+9606 2 has taken a fork
+9606 2 eating
+9756 3 thinking
+9756 4 thinking
+9756 1 sleeping
+9756 2 sleeping
+9756 3 has taken a fork
+9756 3 has taken a fork
+9756 3 eating
+9756 4 has taken a fork
+9756 4 has taken a fork
+9756 4 eating
+9906 2 thinking
+9906 1 thinking
+9906 3 sleeping
+9906 2 has taken a fork
+9906 2 has taken a fork
+9906 2 eating
+9907 4 sleeping
+9907 1 has taken a fork
+9907 1 has taken a fork
+9907 1 eating
+10056 3 thinking
+10058 4 thinking
+10058 1 sleeping
+10058 2 sleeping
+10058 3 has taken a fork
+10058 3 has taken a fork
+10058 3 eating
+10058 4 has taken a fork
+10058 4 has taken a fork
+10058 4 eating
+10208 4 sleeping
+10208 2 thinking
+10208 3 sleeping
+10208 2 has taken a fork
+10208 2 has taken a fork
+10208 2 eating
+10209 1 thinking
+10210 1 has taken a fork
+10210 1 has taken a fork
+10210 1 eating
+10353 3 thinking
+10356 2 sleeping
+10356 3 has taken a fork
+10356 3 has taken a fork
+10356 3 eating
+10358 4 thinking
+10358 1 sleeping
+10358 4 has taken a fork
+10358 4 has taken a fork
+10358 4 eating
+10507 2 thinking
+10507 1 thinking
+10507 3 sleeping
+10507 4 sleeping
+10507 2 has taken a fork
+10507 2 has taken a fork
+10507 2 eating
+10507 1 has taken a fork
+10507 1 has taken a fork
+10507 1 eating
+10656 1 sleeping
+10656 3 thinking
+10656 2 sleeping
+10656 3 has taken a fork
+10656 3 has taken a fork
+10656 3 eating
+10657 4 thinking
+10657 4 has taken a fork
+10657 4 has taken a fork
+10657 4 eating
+10803 2 thinking
+10803 3 sleeping
+10803 2 has taken a fork
+10803 2 has taken a fork
+10803 2 eating
+10806 4 sleeping
+10807 1 thinking
+10807 1 has taken a fork
+10807 1 has taken a fork
+10807 1 eating
+10951 2 sleeping
+10956 3 thinking
+10956 3 has taken a fork
+10956 3 has taken a fork
+10956 3 eating
+10956 1 sleeping
+10956 4 thinking
+10956 4 has taken a fork
+10956 4 has taken a fork
+10956 4 eating
+11102 2 thinking
+11107 1 thinking
+11107 3 sleeping
+11107 4 sleeping
+11107 2 has taken a fork
+11107 2 has taken a fork
+11107 2 eating
+11107 1 has taken a fork
+11107 1 has taken a fork
+11107 1 eating
+11257 3 thinking
+11257 4 thinking
+11257 1 sleeping
+11257 3 has taken a fork
+11257 3 has taken a fork
+11257 3 eating
+11258 2 sleeping
+11258 4 has taken a fork
+11258 4 has taken a fork
+11258 4 eating
+11402 1 thinking
+11407 3 sleeping
+11407 1 has taken a fork
+11407 1 has taken a fork
+11407 1 eating
+11408 2 thinking
+11408 4 sleeping
+11408 2 has taken a fork
+11408 2 has taken a fork
+11408 2 eating
+11556 3 thinking
+11557 4 thinking
+11557 1 sleeping
+11557 2 sleeping
+11557 3 has taken a fork
+11557 3 has taken a fork
+11557 3 eating
+11557 4 has taken a fork
+11557 4 has taken a fork
+11557 4 eating
+11707 2 thinking
+11707 1 thinking
+11707 3 sleeping
+11707 4 sleeping
+11707 2 has taken a fork
+11707 2 has taken a fork
+11707 2 eating
+11707 1 has taken a fork
+11707 1 has taken a fork
+11707 1 eating
+11856 3 thinking
+11856 4 thinking
+11856 1 sleeping
+11856 3 has taken a fork
+11856 3 has taken a fork
+11856 3 eating
+11858 2 sleeping
+11858 4 has taken a fork
+11858 4 has taken a fork
+11858 4 eating
+12006 1 thinking
+12006 4 sleeping
+12006 3 sleeping
+12006 1 has taken a fork
+12006 1 has taken a fork
+12006 1 eating
+12008 2 thinking
+12008 2 has taken a fork
+12008 2 has taken a fork
+12008 2 eating
+12156 4 thinking
+12156 1 sleeping
+12156 2 sleeping
+12156 4 has taken a fork
+12156 4 has taken a fork
+12156 4 eating
+12157 3 thinking
+12157 3 has taken a fork
+12157 3 has taken a fork
+12157 3 eating
+12305 2 thinking
+12306 3 sleeping
+12306 4 sleeping
+12306 2 has taken a fork
+12306 2 has taken a fork
+12306 2 eating
+12307 1 thinking
+12307 1 has taken a fork
+12307 1 has taken a fork
+12307 1 eating
+12453 3 thinking
+12455 4 thinking
+12457 1 sleeping
+12457 2 sleeping
+12457 3 has taken a fork
+12457 3 has taken a fork
+12457 3 eating
+12457 4 has taken a fork
+12457 4 has taken a fork
+12457 4 eating
+12608 1 thinking
+12608 2 thinking
+12608 4 sleeping
+12608 3 sleeping
+12608 1 has taken a fork
+12608 1 has taken a fork
+12608 1 eating
+12608 2 has taken a fork
+12608 2 has taken a fork
+12608 2 eating
+12757 3 thinking
+12757 2 sleeping
+12757 3 has taken a fork
+12757 3 has taken a fork
+12757 3 eating
+12757 4 thinking
+12757 1 sleeping
+12757 4 has taken a fork
+12757 4 has taken a fork
+12757 4 eating
+12905 2 thinking
+12905 1 thinking
+12905 4 sleeping
+12905 2 has taken a fork
+12905 2 has taken a fork
+12905 2 eating
+12905 3 sleeping
+12905 1 has taken a fork
+12905 1 has taken a fork
+12905 1 eating
+13055 4 thinking
+13055 1 sleeping
+13055 4 has taken a fork
+13055 4 has taken a fork
+13055 4 eating
+13057 2 sleeping
+13057 3 thinking
+13057 3 has taken a fork
+13057 3 has taken a fork
+13057 3 eating
+13205 1 thinking
+13206 4 sleeping
+13206 2 thinking
+13206 3 sleeping
+13206 1 has taken a fork
+13206 1 has taken a fork
+13206 1 eating
+13206 2 has taken a fork
+13206 2 has taken a fork
+13206 2 eating
+13355 2 sleeping
+13355 1 sleeping
+13356 4 thinking
+13356 4 has taken a fork
+13356 4 has taken a fork
+13356 4 eating
+13356 3 thinking
+13356 3 has taken a fork
+13356 3 has taken a fork
+13356 3 eating
+13507 1 thinking
+13507 2 thinking
+13508 4 sleeping
+13508 3 sleeping
+13508 1 has taken a fork
+13508 1 has taken a fork
+13508 1 eating
+13508 2 has taken a fork
+13508 2 has taken a fork
+13508 2 eating
+13657 3 thinking
+13657 2 sleeping
+13657 3 has taken a fork
+13657 3 has taken a fork
+13657 3 eating
+13658 4 thinking
+13658 1 sleeping
+13658 4 has taken a fork
+13658 4 has taken a fork
+13658 4 eating
+13803 2 thinking
+13807 1 thinking
+13807 3 sleeping
+13807 4 sleeping
+13807 2 has taken a fork
+13807 2 has taken a fork
+13807 2 eating
+13807 1 has taken a fork
+13807 1 has taken a fork
+13807 1 eating
+13957 2 sleeping
+13957 3 thinking
+13957 4 thinking
+13957 3 has taken a fork
+13957 3 has taken a fork
+13957 3 eating
+13960 1 sleeping
+13960 4 has taken a fork
+13960 4 has taken a fork
+13960 4 eating
+14106 4 sleeping
+14106 1 thinking
+14107 1 has taken a fork
+14107 1 has taken a fork
+14107 1 eating
+14107 3 sleeping
+14107 2 thinking
+14107 2 has taken a fork
+14107 2 has taken a fork
+14107 2 eating
+14255 4 thinking
+14255 1 sleeping
+14255 2 sleeping
+14255 4 has taken a fork
+14255 4 has taken a fork
+14255 4 eating
+14257 3 thinking
+14257 3 has taken a fork
+14257 3 has taken a fork
+14257 3 eating
+14404 2 thinking
+14405 4 sleeping
+14405 2 has taken a fork
+14405 2 has taken a fork
+14405 2 eating
+14406 1 thinking
+14408 3 sleeping
+14408 1 has taken a fork
+14408 1 has taken a fork
+14408 1 eating
+14554 1 sleeping
+14554 2 sleeping
+14556 4 thinking
+14556 4 has taken a fork
+14556 4 has taken a fork
+14556 4 eating
+14559 3 thinking
+14559 3 has taken a fork
+14559 3 has taken a fork
+14559 3 eating
+14705 2 thinking
+14706 1 thinking
+14707 3 sleeping
+14707 4 sleeping
+14707 2 has taken a fork
+14707 2 has taken a fork
+14707 2 eating
+14707 1 has taken a fork
+14707 1 has taken a fork
+14707 1 eating
+14857 3 thinking
+14857 4 thinking
+14857 2 sleeping
+14857 3 has taken a fork
+14857 3 has taken a fork
+14857 3 eating
+14860 1 sleeping
+14860 4 has taken a fork
+14860 4 has taken a fork
+14860 4 eating
+15008 2 thinking
+15008 3 sleeping
+15008 1 thinking
+15008 4 sleeping
+15008 2 has taken a fork
+15008 2 has taken a fork
+15008 2 eating
+15008 1 has taken a fork
+15008 1 has taken a fork
+15008 1 eating
+15154 4 thinking
+15157 3 thinking
+15159 1 sleeping
+15159 2 sleeping
+15159 4 has taken a fork
+15159 4 has taken a fork
+15159 4 eating
+15159 3 has taken a fork
+15159 3 has taken a fork
+15159 3 eating
+15308 3 sleeping
+15308 2 thinking
+15308 1 thinking
+15308 2 has taken a fork
+15308 2 has taken a fork
+15308 2 eating
+15308 4 sleeping
+15308 1 has taken a fork
+15308 1 has taken a fork
+15308 1 eating
+15456 1 sleeping
+15459 3 thinking
+15459 3 has taken a fork
+15459 3 has taken a fork
+15459 3 eating
+15459 4 thinking
+15460 2 sleeping
+15460 4 has taken a fork
+15460 4 has taken a fork
+15460 4 eating
+15606 1 thinking
+15608 3 sleeping
+15608 4 sleeping
+15608 1 has taken a fork
+15608 1 has taken a fork
+15608 1 eating
+15611 2 thinking
+15611 2 has taken a fork
+15611 2 has taken a fork
+15611 2 eating
+15757 3 thinking
+15757 1 sleeping
+15757 2 sleeping
+15757 3 has taken a fork
+15757 3 has taken a fork
+15757 3 eating
+15757 4 thinking
+15757 4 has taken a fork
+15757 4 has taken a fork
+15757 4 eating
+15903 2 thinking
+15903 1 thinking
+15909 3 sleeping
+15909 4 sleeping
+15909 2 has taken a fork
+15909 2 has taken a fork
+15909 2 eating
+15909 1 has taken a fork
+15909 1 has taken a fork
+15909 1 eating
+16054 1 sleeping
+16057 3 thinking
+16057 3 has taken a fork
+16057 3 has taken a fork
+16057 3 eating
+16059 4 thinking
+16059 2 sleeping
+16059 4 has taken a fork
+16059 4 has taken a fork
+16059 4 eating
+16203 1 thinking
+16207 2 thinking
+16207 3 sleeping
+16207 4 sleeping
+16207 1 has taken a fork
+16207 1 has taken a fork
+16207 1 eating
+16207 2 has taken a fork
+16207 2 has taken a fork
+16207 2 eating
+16356 2 sleeping
+16356 4 thinking
+16356 4 has taken a fork
+16356 4 has taken a fork
+16356 4 eating
+16358 1 sleeping
+16358 3 thinking
+16358 3 has taken a fork
+16358 3 has taken a fork
+16358 3 eating
+16504 3 sleeping
+16505 2 thinking
+16505 2 has taken a fork
+16505 2 has taken a fork
+16505 2 eating
+16507 1 thinking
+16507 4 sleeping
+16507 1 has taken a fork
+16507 1 has taken a fork
+16507 1 eating
+16654 3 thinking
+16656 2 sleeping
+16656 3 has taken a fork
+16656 3 has taken a fork
+16656 3 eating
+16658 4 thinking
+16658 1 sleeping
+16658 4 has taken a fork
+16658 4 has taken a fork
+16658 4 eating
+16806 3 sleeping
+16806 1 thinking
+16807 2 thinking
+16807 4 sleeping
+16807 1 has taken a fork
+16807 1 has taken a fork
+16807 1 eating
+16807 2 has taken a fork
+16807 2 has taken a fork
+16807 2 eating
+16951 1 sleeping
+16956 2 sleeping
+16956 4 thinking
+16956 4 has taken a fork
+16956 4 has taken a fork
+16956 4 eating
+16958 3 thinking
+16958 3 has taken a fork
+16958 3 has taken a fork
+16958 3 eating
+17100 1 thinking
+17106 2 thinking
+17108 4 sleeping
+17108 1 has taken a fork
+17108 1 has taken a fork
+17108 1 eating
+17108 3 sleeping
+17108 2 has taken a fork
+17108 2 has taken a fork
+17108 2 eating
+17253 4 thinking
+17253 2 sleeping
+17253 4 has taken a fork
+17253 4 has taken a fork
+17253 4 eating
+17254 3 thinking
+17254 1 sleeping
+17254 3 has taken a fork
+17254 3 has taken a fork
+17254 3 eating
+17404 1 thinking
+17404 2 thinking
+17404 4 sleeping
+17404 3 sleeping
+17404 1 has taken a fork
+17404 1 has taken a fork
+17404 1 eating
+17404 2 has taken a fork
+17404 2 has taken a fork
+17404 2 eating
+17553 3 thinking
+17557 1 sleeping
+17557 3 has taken a fork
+17557 3 has taken a fork
+17557 3 eating
+17559 4 thinking
+17559 2 sleeping
+17559 4 has taken a fork
+17559 4 has taken a fork
+17559 4 eating
+17707 1 thinking
+17707 4 sleeping
+17707 1 has taken a fork
+17707 1 has taken a fork
+17707 1 eating
+17708 3 sleeping
+17708 2 thinking
+17708 2 has taken a fork
+17708 2 has taken a fork
+17708 2 eating
+17857 4 thinking
+17857 2 sleeping
+17857 1 sleeping
+17857 3 thinking
+17857 4 has taken a fork
+17857 4 has taken a fork
+17857 4 eating
+17857 3 has taken a fork
+17857 3 has taken a fork
+17857 3 eating
+18002 3 sleeping
+18005 4 sleeping
+18007 1 thinking
+18007 1 has taken a fork
+18007 1 has taken a fork
+18007 1 eating
+18007 2 thinking
+18007 2 has taken a fork
+18007 2 has taken a fork
+18007 2 eating
+18154 4 thinking
+18154 3 thinking
+18158 1 sleeping
+18158 2 sleeping
+18158 3 has taken a fork
+18158 3 has taken a fork
+18158 3 eating
+18158 4 has taken a fork
+18158 4 has taken a fork
+18158 4 eating
+18307 1 thinking
+18307 3 sleeping
+18307 1 has taken a fork
+18307 1 has taken a fork
+18307 1 eating
+18309 4 sleeping
+18309 2 thinking
+18309 2 has taken a fork
+18309 2 has taken a fork
+18309 2 eating
+18452 3 thinking
+18457 4 thinking
+18457 2 sleeping
+18457 1 sleeping
+18457 3 has taken a fork
+18457 3 has taken a fork
+18457 3 eating
+18457 4 has taken a fork
+18457 4 has taken a fork
+18457 4 eating
+18607 2 thinking
+18607 1 thinking
+18607 3 sleeping
+18607 4 sleeping
+18607 2 has taken a fork
+18607 2 has taken a fork
+18607 2 eating
+18607 1 has taken a fork
+18607 1 has taken a fork
+18607 1 eating
+18753 4 thinking
+18753 1 sleeping
+18753 4 has taken a fork
+18753 4 has taken a fork
+18753 4 eating
+18757 3 thinking
+18757 3 has taken a fork
+18757 3 has taken a fork
+18757 3 eating
+18757 2 sleeping
+18901 4 sleeping
+18904 1 thinking
+18904 1 has taken a fork
+18904 1 has taken a fork
+18904 1 eating
+18907 2 thinking
+18907 3 sleeping
+18907 2 has taken a fork
+18907 2 has taken a fork
+18907 2 eating
+19052 4 thinking
+19055 3 thinking
+19057 2 sleeping
+19057 4 has taken a fork
+19057 4 has taken a fork
+19057 4 eating
+19057 1 sleeping
+19057 3 has taken a fork
+19057 3 has taken a fork
+19057 3 eating
+19203 2 thinking
+19203 4 sleeping
+19203 2 has taken a fork
+19203 2 has taken a fork
+19203 2 eating
+19203 1 thinking
+19204 3 sleeping
+19204 1 has taken a fork
+19204 1 has taken a fork
+19204 1 eating
+19353 4 thinking
+19353 2 sleeping
+19353 3 thinking
+19353 4 has taken a fork
+19353 4 has taken a fork
+19353 4 eating
+19353 1 sleeping
+19353 3 has taken a fork
+19353 3 has taken a fork
+19353 3 eating
+19503 1 thinking
+19507 2 thinking
+19507 4 sleeping
+19507 3 sleeping
+19507 1 has taken a fork
+19507 1 has taken a fork
+19507 1 eating
+19507 2 has taken a fork
+19507 2 has taken a fork
+19507 2 eating
+19657 1 sleeping
+19657 3 thinking
+19657 4 thinking
+19657 2 sleeping
+19657 3 has taken a fork
+19657 3 has taken a fork
+19657 3 eating
+19657 4 has taken a fork
+19657 4 has taken a fork
+19657 4 eating
+19804 2 thinking
+19804 3 sleeping
+19804 4 sleeping
+19804 2 has taken a fork
+19804 2 has taken a fork
+19804 2 eating
+19804 1 thinking
+19804 1 has taken a fork
+19804 1 has taken a fork
+19804 1 eating
+19954 1 sleeping
+19956 3 thinking
+19956 3 has taken a fork
+19956 3 has taken a fork
+19956 3 eating
+19956 4 thinking
+19956 2 sleeping
+19956 4 has taken a fork
+19956 4 has taken a fork
+19956 4 eating
+20109 1 thinking
+20109 3 sleeping
+20109 2 thinking
+20109 4 sleeping
+20109 1 has taken a fork
+20109 1 has taken a fork
+20109 1 eating
+20109 2 has taken a fork
+20109 2 has taken a fork
+20109 2 eating
+20254 3 thinking
+20254 4 thinking
+20259 2 sleeping
+20259 1 sleeping
+20259 3 has taken a fork
+20259 3 has taken a fork
+20259 3 eating
+20259 4 has taken a fork
+20259 4 has taken a fork
+20259 4 eating
+20402 3 sleeping
+20406 1 thinking
+20406 1 has taken a fork
+20406 1 has taken a fork
+20406 1 eating
+20406 2 thinking
+20408 4 sleeping
+20408 2 has taken a fork
+20408 2 has taken a fork
+20408 2 eating
+20550 3 thinking
+20553 2 sleeping
+20553 3 has taken a fork
+20553 3 has taken a fork
+20553 3 eating
+20555 1 sleeping
+20555 4 thinking
+20555 4 has taken a fork
+20555 4 has taken a fork
+20555 4 eating
+20703 2 thinking
+20704 4 sleeping
+20704 2 has taken a fork
+20704 2 has taken a fork
+20704 2 eating
+20706 3 sleeping
+20707 1 thinking
+20707 1 has taken a fork
+20707 1 has taken a fork
+20707 1 eating
+20857 2 sleeping
+20857 3 thinking
+20858 3 has taken a fork
+20858 3 has taken a fork
+20858 3 eating
+20859 1 sleeping
+20859 4 thinking
+20859 4 has taken a fork
+20859 4 has taken a fork
+20859 4 eating
+21007 2 thinking
+21007 3 sleeping
+21007 1 thinking
+21007 4 sleeping
+21007 2 has taken a fork
+21007 2 has taken a fork
+21007 2 eating
+21007 1 has taken a fork
+21007 1 has taken a fork
+21007 1 eating
+21153 4 thinking
+21153 4 has taken a fork
+21153 4 has taken a fork
+21153 4 eating
+21153 2 sleeping
+21153 1 sleeping
+21158 3 thinking
+21158 3 has taken a fork
+21158 3 has taken a fork
+21158 3 eating
+21301 4 sleeping
+21301 1 thinking
+21301 2 thinking
+21301 1 has taken a fork
+21301 1 has taken a fork
+21301 1 eating
+21309 3 sleeping
+21309 2 has taken a fork
+21309 2 has taken a fork
+21309 2 eating
+21455 4 thinking
+21455 1 sleeping
+21455 2 sleeping
+21455 3 thinking
+21455 4 has taken a fork
+21455 4 has taken a fork
+21455 4 eating
+21455 3 has taken a fork
+21455 3 has taken a fork
+21455 3 eating
+21601 3 sleeping
+21601 2 thinking
+21601 2 has taken a fork
+21601 2 has taken a fork
+21601 2 eating
+21606 1 thinking
+21606 4 sleeping
+21606 1 has taken a fork
+21606 1 has taken a fork
+21606 1 eating
+21750 2 sleeping
+21752 4 thinking
+21752 1 sleeping
+21752 4 has taken a fork
+21752 4 has taken a fork
+21752 4 eating
+21753 3 thinking
+21753 3 has taken a fork
+21753 3 has taken a fork
+21753 3 eating
+21904 2 thinking
+21904 1 thinking
+21904 4 sleeping
+21904 3 sleeping
+21904 2 has taken a fork
+21904 2 has taken a fork
+21904 2 eating
+21904 1 has taken a fork
+21904 1 has taken a fork
+21904 1 eating
+22052 3 thinking
+22057 4 thinking
+22057 1 sleeping
+22057 2 sleeping
+22057 4 has taken a fork
+22057 4 has taken a fork
+22057 4 eating
+22057 3 has taken a fork
+22057 3 has taken a fork
+22057 3 eating
+22204 2 thinking
+22204 3 sleeping
+22204 2 has taken a fork
+22204 2 has taken a fork
+22204 2 eating
+22207 1 thinking
+22207 1 has taken a fork
+22207 1 has taken a fork
+22207 1 eating
+22207 4 sleeping
+22351 3 thinking
+22351 2 sleeping
+22351 3 has taken a fork
+22351 3 has taken a fork
+22351 3 eating
+22356 4 thinking
+22358 1 sleeping
+22358 4 has taken a fork
+22358 4 has taken a fork
+22358 4 eating
+22501 2 thinking
+22504 3 sleeping
+22504 2 has taken a fork
+22504 2 has taken a fork
+22504 2 eating
+22507 4 sleeping
+22507 1 thinking
+22507 1 has taken a fork
+22507 1 has taken a fork
+22507 1 eating
+22655 3 thinking
+22655 4 thinking
+22655 3 has taken a fork
+22655 3 has taken a fork
+22655 3 eating
+22655 2 sleeping
+22655 1 sleeping
+22655 4 has taken a fork
+22655 4 has taken a fork
+22655 4 eating
+22801 3 sleeping
+22807 2 thinking
+22807 2 has taken a fork
+22807 2 has taken a fork
+22807 2 eating
+22807 4 sleeping
+22807 1 thinking
+22807 1 has taken a fork
+22807 1 has taken a fork
+22807 1 eating
+22951 3 thinking
+22954 1 sleeping
+22954 3 has taken a fork
+22954 3 has taken a fork
+22954 3 eating
+22957 4 thinking
+22959 2 sleeping
+22959 4 has taken a fork
+22959 4 has taken a fork
+22959 4 eating
+23101 1 thinking
+23107 4 sleeping
+23107 1 has taken a fork
+23107 1 has taken a fork
+23107 1 eating
+23107 3 sleeping
+23107 2 thinking
+23107 2 has taken a fork
+23107 2 has taken a fork
+23107 2 eating
+23257 2 sleeping
+23259 4 thinking
+23259 4 has taken a fork
+23259 4 has taken a fork
+23259 4 eating
+23259 1 sleeping
+23259 3 thinking
+23259 3 has taken a fork
+23259 3 has taken a fork
+23259 3 eating
+23407 2 thinking
+23408 3 sleeping
+23408 1 thinking
+23408 2 has taken a fork
+23408 2 has taken a fork
+23408 2 eating
+23408 4 sleeping
+23408 1 has taken a fork
+23408 1 has taken a fork
+23408 1 eating
+23557 2 sleeping
+23557 4 thinking
+23557 1 sleeping
+23557 3 thinking
+23557 4 has taken a fork
+23557 4 has taken a fork
+23557 4 eating
+23557 3 has taken a fork
+23557 3 has taken a fork
+23557 3 eating
+23706 3 sleeping
+23706 2 thinking
+23706 4 sleeping
+23706 2 has taken a fork
+23706 2 has taken a fork
+23706 2 eating
+23706 1 thinking
+23706 1 has taken a fork
+23706 1 has taken a fork
+23706 1 eating
+23855 4 thinking
+23855 2 sleeping
+23856 4 has taken a fork
+23856 4 has taken a fork
+23856 4 eating
+23856 1 sleeping
+23856 3 thinking
+23856 3 has taken a fork
+23856 3 has taken a fork
+23856 3 eating
+24006 4 sleeping
+24006 3 sleeping
+24006 2 thinking
+24006 1 thinking
+24006 2 has taken a fork
+24006 2 has taken a fork
+24006 2 eating
+24006 1 has taken a fork
+24006 1 has taken a fork
+24006 1 eating
+24156 4 thinking
+24156 2 sleeping
+24156 4 has taken a fork
+24156 4 has taken a fork
+24156 4 eating
+24156 1 sleeping
+24157 3 thinking
+24157 3 has taken a fork
+24157 3 has taken a fork
+24157 3 eating
+24305 1 thinking
+24307 2 thinking
+24307 4 sleeping
+24307 3 sleeping
+24307 1 has taken a fork
+24307 1 has taken a fork
+24307 1 eating
+24307 2 has taken a fork
+24307 2 has taken a fork
+24307 2 eating
+24455 1 sleeping
+24457 2 sleeping
+24458 3 thinking
+24458 3 has taken a fork
+24458 3 has taken a fork
+24458 3 eating
+24458 4 thinking
+24458 4 has taken a fork
+24458 4 has taken a fork
+24458 4 eating
+24604 2 thinking
+24604 4 sleeping
+24604 2 has taken a fork
+24604 2 has taken a fork
+24604 2 eating
+24606 1 thinking
+24606 3 sleeping
+24606 1 has taken a fork
+24606 1 has taken a fork
+24606 1 eating
+24751 3 thinking
+24753 4 thinking
+24754 2 sleeping
+24754 1 sleeping
+24754 3 has taken a fork
+24754 3 has taken a fork
+24754 3 eating
+24754 4 has taken a fork
+24754 4 has taken a fork
+24754 4 eating
+24901 1 thinking
+24904 2 thinking
+24907 3 sleeping
+24907 4 sleeping
+24907 1 has taken a fork
+24907 1 has taken a fork
+24907 1 eating
+24907 2 has taken a fork
+24907 2 has taken a fork
+24907 2 eating
+25057 4 thinking
+25057 1 sleeping
+25057 4 has taken a fork
+25057 4 has taken a fork
+25057 4 eating
+25058 2 sleeping
+25058 3 thinking
+25058 3 has taken a fork
+25058 3 has taken a fork
+25058 3 eating
+25205 3 sleeping
+25208 1 thinking
+25208 1 has taken a fork
+25208 1 has taken a fork
+25208 1 eating
+25208 4 sleeping
+25208 2 thinking
+25208 2 has taken a fork
+25208 2 has taken a fork
+25208 2 eating
+25355 3 thinking
+25355 2 sleeping
+25355 1 sleeping
+25355 4 thinking
+25355 3 has taken a fork
+25356 3 has taken a fork
+25356 3 eating
+25356 4 has taken a fork
+25356 4 has taken a fork
+25356 4 eating
+25505 4 sleeping
+25505 1 thinking
+25505 3 sleeping
+25505 1 has taken a fork
+25505 1 has taken a fork
+25505 1 eating
+25506 2 thinking
+25506 2 has taken a fork
+25506 2 has taken a fork
+25506 2 eating
+25653 3 thinking
+25655 1 sleeping
+25655 2 sleeping
+25655 3 has taken a fork
+25655 3 has taken a fork
+25655 3 eating
+25655 4 thinking
+25655 4 has taken a fork
+25655 4 has taken a fork
+25655 4 eating
+25801 1 thinking
+25802 4 sleeping
+25802 2 thinking
+25802 1 has taken a fork
+25802 1 has taken a fork
+25802 1 eating
+25806 3 sleeping
+25806 2 has taken a fork
+25806 2 has taken a fork
+25806 2 eating
+25955 1 sleeping
+25955 4 thinking
+25955 2 sleeping
+25955 4 has taken a fork
+25955 4 has taken a fork
+25955 4 eating
+25958 3 thinking
+25958 3 has taken a fork
+25958 3 has taken a fork
+25958 3 eating
+26107 2 thinking
+26107 3 sleeping
+26107 4 sleeping
+26107 1 thinking
+26107 2 has taken a fork
+26107 2 has taken a fork
+26107 2 eating
+26107 1 has taken a fork
+26107 1 has taken a fork
+26107 1 eating
+26256 1 sleeping
+26257 3 thinking
+26257 3 has taken a fork
+26257 3 has taken a fork
+26257 3 eating
+26257 4 thinking
+26257 2 sleeping
+26257 4 has taken a fork
+26257 4 has taken a fork
+26257 4 eating
+26406 3 sleeping
+26406 2 thinking
+26406 2 has taken a fork
+26406 2 has taken a fork
+26406 2 eating
+26407 4 sleeping
+26407 1 thinking
+26407 1 has taken a fork
+26407 1 has taken a fork
+26407 1 eating
+26553 1 sleeping
+26555 3 thinking
+26555 3 has taken a fork
+26555 3 has taken a fork
+26555 3 eating
+26556 4 thinking
+26556 2 sleeping
+26556 4 has taken a fork
+26556 4 has taken a fork
+26556 4 eating
+26703 1 thinking
+26706 2 thinking
+26706 3 sleeping
+26706 4 sleeping
+26706 1 has taken a fork
+26706 1 has taken a fork
+26706 1 eating
+26706 2 has taken a fork
+26706 2 has taken a fork
+26706 2 eating
+26858 4 thinking
+26858 3 thinking
+26858 1 sleeping
+26858 2 sleeping
+26858 4 has taken a fork
+26858 4 has taken a fork
+26858 4 eating
+26858 3 has taken a fork
+26858 3 has taken a fork
+26858 3 eating
+27007 2 thinking
+27007 1 thinking
+27007 4 sleeping
+27007 2 has taken a fork
+27007 2 has taken a fork
+27007 2 eating
+27007 3 sleeping
+27007 1 has taken a fork
+27007 1 has taken a fork
+27007 1 eating
+27157 4 thinking
+27157 2 sleeping
+27157 4 has taken a fork
+27157 4 has taken a fork
+27157 4 eating
+27157 3 thinking
+27158 1 sleeping
+27158 3 has taken a fork
+27158 3 has taken a fork
+27158 3 eating
+27307 2 thinking
+27307 1 thinking
+27307 4 sleeping
+27307 3 sleeping
+27307 2 has taken a fork
+27307 2 has taken a fork
+27307 2 eating
+27307 1 has taken a fork
+27307 1 has taken a fork
+27307 1 eating
+27452 4 thinking
+27454 3 thinking
+27454 2 sleeping
+27454 1 sleeping
+27454 4 has taken a fork
+27454 4 has taken a fork
+27454 4 eating
+27454 3 has taken a fork
+27454 3 has taken a fork
+27454 3 eating
+27604 2 thinking
+27604 1 thinking
+27604 4 sleeping
+27604 3 sleeping
+27604 2 has taken a fork
+27604 2 has taken a fork
+27604 2 eating
+27604 1 has taken a fork
+27604 1 has taken a fork
+27604 1 eating
+27753 3 thinking
+27754 1 sleeping
+27754 3 has taken a fork
+27754 3 has taken a fork
+27754 3 eating
+27756 4 thinking
+27756 2 sleeping
+27756 4 has taken a fork
+27756 4 has taken a fork
+27756 4 eating
+27901 1 thinking
+27902 3 sleeping
+27902 1 has taken a fork
+27902 1 has taken a fork
+27902 1 eating
+27906 2 thinking
+27906 4 sleeping
+27906 2 has taken a fork
+27906 2 has taken a fork
+27906 2 eating
+28052 1 sleeping
+28053 3 thinking
+28053 3 has taken a fork
+28053 3 has taken a fork
+28053 3 eating
+28058 4 thinking
+28058 2 sleeping
+28058 4 has taken a fork
+28058 4 has taken a fork
+28058 4 eating
+28202 1 thinking
+28207 3 sleeping
+28207 1 has taken a fork
+28207 1 has taken a fork
+28207 1 eating
+28208 2 thinking
+28208 4 sleeping
+28208 2 has taken a fork
+28208 2 has taken a fork
+28208 2 eating
+28357 4 thinking
+28357 2 sleeping
+28357 3 thinking
+28357 4 has taken a fork
+28357 4 has taken a fork
+28357 4 eating
+28357 1 sleeping
+28357 3 has taken a fork
+28357 3 has taken a fork
+28357 3 eating
+28507 4 sleeping
+28507 3 sleeping
+28507 2 thinking
+28507 1 thinking
+28507 2 has taken a fork
+28507 2 has taken a fork
+28507 2 eating
+28507 1 has taken a fork
+28507 1 has taken a fork
+28507 1 eating
+28657 4 thinking
+28657 2 sleeping
+28657 1 sleeping
+28657 3 thinking
+28657 4 has taken a fork
+28657 4 has taken a fork
+28657 4 eating
+28657 3 has taken a fork
+28657 3 has taken a fork
+28657 3 eating
+28807 3 sleeping
+28807 2 thinking
+28807 1 thinking
+28807 4 sleeping
+28807 2 has taken a fork
+28807 2 has taken a fork
+28807 2 eating
+28807 1 has taken a fork
+28807 1 has taken a fork
+28807 1 eating
+28955 4 thinking
+28955 2 sleeping
+28955 4 has taken a fork
+28955 4 has taken a fork
+28955 4 eating
+28955 1 sleeping
+28957 3 thinking
+28957 3 has taken a fork
+28957 3 has taken a fork
+28957 3 eating
+29107 2 thinking
+29107 1 thinking
+29107 4 sleeping
+29107 3 sleeping
+29107 2 has taken a fork
+29107 2 has taken a fork
+29107 2 eating
+29107 1 has taken a fork
+29107 1 has taken a fork
+29107 1 eating
+29254 3 thinking
+29255 4 thinking
+29255 2 sleeping
+29255 1 sleeping
+29255 4 has taken a fork
+29255 4 has taken a fork
+29255 4 eating
+29255 3 has taken a fork
+29255 3 has taken a fork
+29255 3 eating
+29400 2 thinking
+29400 1 thinking
+29400 3 sleeping
+29400 4 sleeping
+29400 2 has taken a fork
+29400 2 has taken a fork
+29400 2 eating
+29400 1 has taken a fork
+29400 1 has taken a fork
+29400 1 eating
+29552 3 thinking
+29552 2 sleeping
+29552 4 thinking
+29552 1 sleeping
+29552 3 has taken a fork
+29552 3 has taken a fork
+29552 3 eating
+29552 4 has taken a fork
+29552 4 has taken a fork
+29552 4 eating
+29702 2 thinking
+29702 1 thinking
+29702 4 sleeping
+29702 3 sleeping
+29702 2 has taken a fork
+29702 2 has taken a fork
+29702 2 eating
+29702 1 has taken a fork
+29702 1 has taken a fork
+29702 1 eating
+29853 3 thinking
+29854 4 thinking
+29854 2 sleeping
+29854 1 sleeping
+29854 4 has taken a fork
+29854 4 has taken a fork
+29854 4 eating
+29854 3 has taken a fork
+29854 3 has taken a fork
+29854 3 eating
+30007 3 sleeping
+30009 2 thinking
+30009 2 has taken a fork
+30009 2 has taken a fork
+30009 2 eating
+30009 1 thinking
+30009 4 sleeping
+30009 1 has taken a fork
+30009 1 has taken a fork
+30009 1 eating
+30158 3 thinking
+30158 2 sleeping
+30158 4 thinking
+30158 3 has taken a fork
+30158 3 has taken a fork
+30158 3 eating
+30159 1 sleeping
+30159 4 has taken a fork
+30159 4 has taken a fork
+30159 4 eating
+30307 2 thinking
+30307 1 thinking
+30307 4 sleeping
+30308 3 sleeping
+30308 1 has taken a fork
+30308 1 has taken a fork
+30308 1 eating
+30308 2 has taken a fork
+30308 2 has taken a fork
+30308 2 eating
+30455 2 sleeping
+30456 3 thinking
+30456 1 sleeping
+30456 3 has taken a fork
+30456 3 has taken a fork
+30456 3 eating
+30456 4 thinking
+30457 4 has taken a fork
+30457 4 has taken a fork
+30457 4 eating
+30602 2 thinking
+30604 4 sleeping
+30604 1 thinking
+30604 3 sleeping
+30604 2 has taken a fork
+30604 2 has taken a fork
+30604 2 eating
+30604 1 has taken a fork
+30604 1 has taken a fork
+30604 1 eating
+30751 3 thinking
+30751 1 sleeping
+30751 3 has taken a fork
+30751 3 has taken a fork
+30751 3 eating
+30752 4 thinking
+30752 2 sleeping
+30752 4 has taken a fork
+30752 4 has taken a fork
+30752 4 eating
+30901 3 sleeping
+30902 2 thinking
+30902 2 has taken a fork
+30902 2 has taken a fork
+30902 2 eating
+30902 1 thinking
+30902 4 sleeping
+30902 1 has taken a fork
+30902 1 has taken a fork
+30902 1 eating
+31052 3 thinking
+31052 4 thinking
+31056 1 sleeping
+31057 2 sleeping
+31057 3 has taken a fork
+31057 3 has taken a fork
+31057 3 eating
+31057 4 has taken a fork
+31057 4 has taken a fork
+31057 4 eating
+31206 1 thinking
+31206 3 sleeping
+31206 2 thinking
+31206 1 has taken a fork
+31206 1 has taken a fork
+31206 1 eating
+31206 4 sleeping
+31206 2 has taken a fork
+31206 2 has taken a fork
+31206 2 eating
+31352 2 sleeping
+31356 4 thinking
+31356 1 sleeping
+31356 4 has taken a fork
+31356 4 has taken a fork
+31356 4 eating
+31356 3 thinking
+31356 3 has taken a fork
+31356 3 has taken a fork
+31356 3 eating
+31501 2 thinking
+31507 4 sleeping
+31507 2 has taken a fork
+31507 2 has taken a fork
+31507 2 eating
+31507 3 sleeping
+31507 1 thinking
+31507 1 has taken a fork
+31507 1 has taken a fork
+31507 1 eating
+31653 4 thinking
+31653 2 sleeping
+31653 4 has taken a fork
+31653 4 has taken a fork
+31653 4 eating
+31655 1 sleeping
+31655 3 thinking
+31655 3 has taken a fork
+31655 3 has taken a fork
+31655 3 eating
+31802 3 sleeping
+31803 4 sleeping
+31803 2 thinking
+31803 2 has taken a fork
+31803 2 has taken a fork
+31803 2 eating
+31807 1 thinking
+31807 1 has taken a fork
+31807 1 has taken a fork
+31807 1 eating
+31952 3 thinking
+31956 4 thinking
+31956 2 sleeping
+31956 1 sleeping
+31956 3 has taken a fork
+31956 3 has taken a fork
+31956 3 eating
+31956 4 has taken a fork
+31956 4 has taken a fork
+31956 4 eating
+32103 1 thinking
+32106 2 thinking
+32106 4 sleeping
+32106 3 sleeping
+32106 1 has taken a fork
+32106 1 has taken a fork
+32106 1 eating
+32106 2 has taken a fork
+32106 2 has taken a fork
+32106 2 eating
+32256 4 thinking
+32256 3 thinking
+32256 1 sleeping
+32256 4 has taken a fork
+32256 4 has taken a fork
+32256 4 eating
+32256 2 sleeping
+32256 3 has taken a fork
+32256 3 has taken a fork
+32256 3 eating
+32404 2 thinking
+32404 2 has taken a fork
+32404 2 has taken a fork
+32404 2 eating
+32404 4 sleeping
+32404 3 sleeping
+32406 1 thinking
+32406 1 has taken a fork
+32406 1 has taken a fork
+32406 1 eating
+32554 4 thinking
+32554 2 sleeping
+32555 4 has taken a fork
+32555 4 has taken a fork
+32555 4 eating
+32556 3 thinking
+32557 1 sleeping
+32557 3 has taken a fork
+32557 3 has taken a fork
+32557 3 eating
+32705 1 thinking
+32705 2 thinking
+32706 4 sleeping
+32706 3 sleeping
+32706 1 has taken a fork
+32706 1 has taken a fork
+32706 1 eating
+32706 2 has taken a fork
+32706 2 has taken a fork
+32706 2 eating
+32851 3 thinking
+32853 1 sleeping
+32853 3 has taken a fork
+32853 3 has taken a fork
+32853 3 eating
+32853 2 sleeping
+32857 4 thinking
+32857 4 has taken a fork
+32857 4 has taken a fork
+32857 4 eating
+33003 2 thinking
+33003 1 thinking
+33007 3 sleeping
+33007 4 sleeping
+33007 2 has taken a fork
+33007 2 has taken a fork
+33007 2 eating
+33007 1 has taken a fork
+33007 1 has taken a fork
+33007 1 eating
+33156 4 thinking
+33158 3 thinking
+33158 1 sleeping
+33158 2 sleeping
+33158 4 has taken a fork
+33158 4 has taken a fork
+33158 4 eating
+33158 3 has taken a fork
+33158 3 has taken a fork
+33158 3 eating
+33307 2 thinking
+33307 3 sleeping
+33307 1 thinking
+33307 4 sleeping
+33307 2 has taken a fork
+33307 2 has taken a fork
+33307 2 eating
+33307 1 has taken a fork
+33307 1 has taken a fork
+33307 1 eating
+33456 4 thinking
+33456 1 sleeping
+33456 4 has taken a fork
+33456 4 has taken a fork
+33456 4 eating
+33458 3 thinking
+33458 2 sleeping
+33458 3 has taken a fork
+33458 3 has taken a fork
+33458 3 eating
+33608 1 thinking
+33608 4 sleeping
+33608 1 has taken a fork
+33608 1 has taken a fork
+33608 1 eating
+33608 2 thinking
+33608 3 sleeping
+33608 2 has taken a fork
+33608 2 has taken a fork
+33608 2 eating
+33756 3 thinking
+33756 3 has taken a fork
+33756 3 has taken a fork
+33756 3 eating
+33756 2 sleeping
+33756 4 thinking
+33756 1 sleeping
+33756 4 has taken a fork
+33756 4 has taken a fork
+33756 4 eating
+33903 2 thinking
+33903 4 sleeping
+33903 2 has taken a fork
+33903 2 has taken a fork
+33903 2 eating
+33903 1 thinking
+33907 3 sleeping
+33907 1 has taken a fork
+33907 1 has taken a fork
+33907 1 eating
+34052 2 sleeping
+34052 4 thinking
+34052 4 has taken a fork
+34052 4 has taken a fork
+34052 4 eating
+34057 3 thinking
+34058 1 sleeping
+34058 3 has taken a fork
+34058 3 has taken a fork
+34058 3 eating
+34202 2 thinking
+34202 2 has taken a fork
+34202 2 has taken a fork
+34202 2 eating
+34202 4 sleeping
+34207 3 sleeping
+34207 1 thinking
+34207 1 has taken a fork
+34207 1 has taken a fork
+34207 1 eating
+34353 2 sleeping
+34357 4 thinking
+34357 4 has taken a fork
+34357 4 has taken a fork
+34357 4 eating
+34357 1 sleeping
+34360 3 thinking
+34360 3 has taken a fork
+34360 3 has taken a fork
+34360 3 eating
+34505 2 thinking
+34507 3 sleeping
+34507 2 has taken a fork
+34507 2 has taken a fork
+34507 2 eating
+34509 1 thinking
+34509 4 sleeping
+34509 1 has taken a fork
+34509 1 has taken a fork
+34509 1 eating
+34656 3 thinking
+34656 4 thinking
+34656 2 sleeping
+34656 1 sleeping
+34656 3 has taken a fork
+34656 3 has taken a fork
+34656 3 eating
+34656 4 has taken a fork
+34656 4 has taken a fork
+34656 4 eating
+34805 2 thinking
+34805 1 thinking
+34806 4 sleeping
+34806 3 sleeping
+34806 2 has taken a fork
+34806 2 has taken a fork
+34806 2 eating
+34806 1 has taken a fork
+34806 1 has taken a fork
+34806 1 eating
+34954 2 sleeping
+34954 3 thinking
+34954 3 has taken a fork
+34954 3 has taken a fork
+34954 3 eating
+34955 4 thinking
+34960 1 sleeping
+34960 4 has taken a fork
+34960 4 has taken a fork
+34960 4 eating
+35102 2 thinking
+35103 3 sleeping
+35103 2 has taken a fork
+35103 2 has taken a fork
+35103 2 eating
+35109 4 sleeping
+35109 1 thinking
+35109 1 has taken a fork
+35109 1 has taken a fork
+35109 1 eating
+35253 2 sleeping
+35253 3 thinking
+35253 3 has taken a fork
+35253 3 has taken a fork
+35253 3 eating
+35255 4 thinking
+35255 1 sleeping
+35255 4 has taken a fork
+35255 4 has taken a fork
+35255 4 eating
+35403 1 thinking
+35403 2 thinking
+35403 4 sleeping
+35403 3 sleeping
+35403 1 has taken a fork
+35403 1 has taken a fork
+35403 1 eating
+35403 2 has taken a fork
+35403 2 has taken a fork
+35403 2 eating
+35553 3 thinking
+35557 1 sleeping
+35557 4 thinking
+35557 2 sleeping
+35557 3 has taken a fork
+35557 3 has taken a fork
+35557 3 eating
+35557 4 has taken a fork
+35557 4 has taken a fork
+35557 4 eating
+35705 3 sleeping
+35705 4 sleeping
+35705 1 thinking
+35705 2 thinking
+35705 1 has taken a fork
+35705 1 has taken a fork
+35705 1 eating
+35705 2 has taken a fork
+35705 2 has taken a fork
+35705 2 eating
+35853 1 sleeping
+35853 2 sleeping
+35853 3 thinking
+35853 4 thinking
+35853 3 has taken a fork
+35853 3 has taken a fork
+35853 3 eating
+35853 4 has taken a fork
+35853 4 has taken a fork
+35853 4 eating
+36003 3 sleeping
+36003 4 sleeping
+36003 1 thinking
+36003 1 has taken a fork
+36003 1 has taken a fork
+36003 1 eating
+36007 2 thinking
+36007 2 has taken a fork
+36007 2 has taken a fork
+36007 2 eating
+36153 3 thinking
+36155 1 sleeping
+36155 4 thinking
+36155 3 has taken a fork
+36155 3 has taken a fork
+36155 3 eating
+36156 2 sleeping
+36156 4 has taken a fork
+36156 4 has taken a fork
+36156 4 eating
+36305 2 thinking
+36305 1 thinking
+36306 3 sleeping
+36306 4 sleeping
+36306 2 has taken a fork
+36306 2 has taken a fork
+36306 2 eating
+36306 1 has taken a fork
+36306 1 has taken a fork
+36306 1 eating
+36454 1 sleeping
+36456 4 thinking
+36456 4 has taken a fork
+36456 4 has taken a fork
+36456 4 eating
+36456 3 thinking
+36456 2 sleeping
+36456 3 has taken a fork
+36456 3 has taken a fork
+36456 3 eating
+36606 4 sleeping
+36606 3 sleeping
+36606 2 thinking
+36606 2 has taken a fork
+36606 2 has taken a fork
+36606 2 eating
+36608 1 thinking
+36608 1 has taken a fork
+36608 1 has taken a fork
+36608 1 eating
+36753 4 thinking
+36753 3 thinking
+36756 2 sleeping
+36759 1 sleeping
+36759 4 has taken a fork
+36759 4 has taken a fork
+36759 4 eating
+36759 3 has taken a fork
+36759 3 has taken a fork
+36759 3 eating
+36906 3 sleeping
+36908 2 thinking
+36908 2 has taken a fork
+36908 2 has taken a fork
+36908 2 eating
+36909 1 thinking
+36909 4 sleeping
+36909 1 has taken a fork
+36909 1 has taken a fork
+36909 1 eating
+37056 1 sleeping
+37056 2 sleeping
+37056 3 thinking
+37056 3 has taken a fork
+37056 3 has taken a fork
+37056 3 eating
+37059 4 thinking
+37059 4 has taken a fork
+37059 4 has taken a fork
+37059 4 eating
+37203 2 thinking
+37206 1 thinking
+37206 3 sleeping
+37206 4 sleeping
+37206 2 has taken a fork
+37206 2 has taken a fork
+37206 2 eating
+37206 1 has taken a fork
+37206 1 has taken a fork
+37206 1 eating
+37356 4 thinking
+37356 3 thinking
+37356 2 sleeping
+37356 1 sleeping
+37356 4 has taken a fork
+37356 4 has taken a fork
+37356 4 eating
+37356 3 has taken a fork
+37356 3 has taken a fork
+37356 3 eating
+37506 2 thinking
+37506 1 thinking
+37507 3 sleeping
+37507 4 sleeping
+37507 2 has taken a fork
+37507 2 has taken a fork
+37507 2 eating
+37507 1 has taken a fork
+37507 1 has taken a fork
+37507 1 eating
+37656 1 sleeping
+37656 4 thinking
+37656 2 sleeping
+37656 3 thinking
+37656 4 has taken a fork
+37656 4 has taken a fork
+37656 4 eating
+37656 3 has taken a fork
+37656 3 has taken a fork
+37656 3 eating
+37805 2 thinking
+37805 1 thinking
+37807 3 sleeping
+37807 4 sleeping
+37807 2 has taken a fork
+37807 2 has taken a fork
+37807 2 eating
+37807 1 has taken a fork
+37807 1 has taken a fork
+37807 1 eating
+37956 4 thinking
+37957 3 thinking
+37957 2 sleeping
+37957 1 sleeping
+37957 4 has taken a fork
+37957 4 has taken a fork
+37957 4 eating
+37957 3 has taken a fork
+37957 3 has taken a fork
+37957 3 eating
+38106 1 thinking
+38106 3 sleeping
+38106 2 thinking
+38106 4 sleeping
+38106 1 has taken a fork
+38106 1 has taken a fork
+38106 1 eating
+38106 2 has taken a fork
+38106 2 has taken a fork
+38106 2 eating
+38254 4 thinking
+38257 3 thinking
+38257 1 sleeping
+38257 2 sleeping
+38257 4 has taken a fork
+38257 4 has taken a fork
+38257 4 eating
+38257 3 has taken a fork
+38257 3 has taken a fork
+38257 3 eating
+38402 4 sleeping
+38404 1 thinking
+38404 1 has taken a fork
+38404 1 has taken a fork
+38404 1 eating
+38404 3 sleeping
+38404 2 thinking
+38404 2 has taken a fork
+38404 2 has taken a fork
+38404 2 eating
+38551 4 thinking
+38551 2 sleeping
+38551 4 has taken a fork
+38551 4 has taken a fork
+38551 4 eating
+38551 1 sleeping
+38551 3 thinking
+38551 3 has taken a fork
+38551 3 has taken a fork
+38551 3 eating
+38701 3 sleeping
+38701 2 thinking
+38701 4 sleeping
+38701 2 has taken a fork
+38701 2 has taken a fork
+38701 2 eating
+38705 1 thinking
+38705 1 has taken a fork
+38705 1 has taken a fork
+38705 1 eating
+38855 4 thinking
+38855 2 sleeping
+38855 4 has taken a fork
+38855 4 has taken a fork
+38855 4 eating
+38855 3 thinking
+38860 1 sleeping
+38860 3 has taken a fork
+38860 3 has taken a fork
+38860 3 eating
+39006 4 sleeping
+39006 1 thinking
+39006 1 has taken a fork
+39006 1 has taken a fork
+39006 1 eating
+39010 2 thinking
+39010 3 sleeping
+39010 2 has taken a fork
+39010 2 has taken a fork
+39010 2 eating
+39155 4 thinking
+39155 1 sleeping
+39155 4 has taken a fork
+39155 4 has taken a fork
+39155 4 eating
+39157 3 thinking
+39157 2 sleeping
+39157 3 has taken a fork
+39157 3 has taken a fork
+39157 3 eating
+39304 2 thinking
+39304 3 sleeping
+39304 1 thinking
+39304 2 has taken a fork
+39304 2 has taken a fork
+39304 2 eating
+39306 4 sleeping
+39306 1 has taken a fork
+39306 1 has taken a fork
+39306 1 eating
+39451 3 thinking
+39456 1 sleeping
+39456 3 has taken a fork
+39456 3 has taken a fork
+39456 3 eating
+39456 4 thinking
+39456 2 sleeping
+39456 4 has taken a fork
+39456 4 has taken a fork
+39456 4 eating
+39606 3 sleeping
+39606 2 thinking
+39606 2 has taken a fork
+39606 2 has taken a fork
+39606 2 eating
+39606 4 sleeping
+39606 1 thinking
+39606 1 has taken a fork
+39606 1 has taken a fork
+39606 1 eating
+39756 3 thinking
+39756 1 sleeping
+39756 2 sleeping
+39756 4 thinking
+39757 3 has taken a fork
+39757 3 has taken a fork
+39757 3 eating
+39757 4 has taken a fork
+39757 4 has taken a fork
+39757 4 eating
+39904 3 sleeping
+39905 2 thinking
+39905 2 has taken a fork
+39905 2 has taken a fork
+39905 2 eating
+39910 4 sleeping
+39910 1 thinking
+39910 1 has taken a fork
+39910 1 has taken a fork
+39910 1 eating
+40054 3 thinking
+40054 2 sleeping
+40054 3 has taken a fork
+40054 3 has taken a fork
+40054 3 eating
+40056 4 thinking
+40056 1 sleeping
+40056 4 has taken a fork
+40056 4 has taken a fork
+40056 4 eating

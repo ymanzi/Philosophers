@@ -10,68 +10,55 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo.h"
 
-void	write_status_message(t_glob *g)
+void		write_status_message(int msg, int wr, t_glob *gen)
 {
-	ft_putnbr_fd((long long)g->time_current, 1);
+	ft_putnbr_fd((long long)gen->time_current, 1);
 	write(1, " ", 1);
-	ft_putnbr_fd((long long)g->indice_wr, 1);
-	if (g->indice_msg == 1)
+	ft_putnbr_fd((long long)wr, 1);
+	if (msg == 1)
 	{
 		write(1, FORK_STR, ft_strlen(FORK_STR));
-		ft_putnbr_fd((long long)g->time_current, 1);
+		ft_putnbr_fd((long long)gen->time_current, 1);
 		write(1, " ", 1);
-		ft_putnbr_fd((long long)g->indice_wr, 1);
+		ft_putnbr_fd((long long)wr, 1);
 		write(1, FORK_STR, ft_strlen(FORK_STR));
-		ft_putnbr_fd((long long)g->time_current, 1);
+		ft_putnbr_fd((long long)gen->time_current, 1);
 		write(1, " ", 1);
-		ft_putnbr_fd((long long)g->indice_wr, 1);
+		ft_putnbr_fd((long long)wr, 1);
 		write(1, EAT_STR, ft_strlen(EAT_STR));
 	}
-	else if (g->indice_msg == 2)
+	else if (msg == 2)
 		write(1, SLEEP_STR, ft_strlen(SLEEP_STR));
-	else if (g->indice_msg == 3)
+	else if (msg == 3)
 		write(1, THINK_STR, ft_strlen(THINK_STR));
-	else if (g->indice_msg == 4)
-	{
+	else if (msg == 4)
 		write(1, DEATH_STR, ft_strlen(DEATH_STR));
-		g->alive_w = 1;
-	}
 }
 
-void	inter_write(t_glob *g)
+static void	inter_write(int msg, int wr, t_glob *gen)
 {
-	g->alive_w = 1;
-	ft_putnbr_fd((long long)g->time_current, 1);
+	ft_putnbr_fd((long long)gen->time_current, 1);
+	write(1, " ", 1);
+	ft_putnbr_fd((long long)wr, 1);
+	write(1, " ", 1);
 	write(1, MEAL_STR, ft_strlen(MEAL_STR));
-	sem_post(g->quit);
 }
 
-void	*write_message(void *data)
+void		write_message(int msg, int wr, t_glob *gen)
 {
-	t_glob	*g;
-	int		ind;
+	int	i;
 
-	g = data;
-	while (!g->alive_w)
+	i = 0;
+	if (msg == 5)
+		inter_write(msg, wr + 1, gen);
+	else
+		write_status_message(msg, wr, gen);
+	if (msg == DEATH_MSG)
 	{
-		if (g->indice_wr != -1 && g->indice_msg != -1)
-		{
-			if (g->indice_msg == 5)
-			{
-				inter_write(g);
-				break ;
-			}
-			else
-				write_status_message(g);
-			ind = g->indice_msg;
-			g->indice_msg = -1;
-			g->indice_wr = -1;
-			if (ind == 4 || ind == 5)
-				sem_post(g->quit);
-			sem_post(g->write);
-		}
+		sem_post(gen->quit);
+		exit(BON);
 	}
-	return (data);
+	sem_post(gen->write);
 }
