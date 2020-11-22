@@ -6,13 +6,13 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 19:39:06 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/10/24 19:02:18 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/11/22 16:13:05 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo.h"
 
-long	get_time(void)
+long		get_time(void)
 {
 	struct timeval	tp;
 	long			milliseconds;
@@ -23,50 +23,61 @@ long	get_time(void)
 	return (milliseconds);
 }
 
-void	unlink_fct(void)
+t_glob		*ft_free(int i, char *str, t_glob *gen)
 {
+	if (i)
+		;
+	if (gen->philo)
+		free(gen->philo);
 	sem_unlink(SEM_WRITE);
 	sem_unlink(SEM_NAME);
+	sem_unlink(SEM_QUIT);
+	if (gen)
+		free(gen);
+	write(1, str, ft_strlen(str));
+	return (NULL);
 }
 
-int		ft_free(int i, t_glob *gen)
+t_glob		*unlink_fct(int size)
 {
-	if (i >= 2)
-		sem_close(gen->write);
-	if (i >= 4)
-		free(gen->list_philo);
-	free(gen);
-	unlink_fct();
-	if (i >= 4)
-		return (1);
-	return (0);
-}
-
-int		main(int argc, char **argv)
-{
-	int		size;
 	t_glob	*gen;
 
+	sem_unlink(SEM_WRITE);
+	sem_unlink(SEM_NAME);
+	sem_unlink(SEM_QUIT);
+	if (!(gen = (t_glob*)malloc(sizeof(t_glob))))
+		return (ft_free(-1, "Malloc Error\n", gen));
+	memset(gen, 0, sizeof(t_glob));
+	if ((gen->quit = sem_open(SEM_QUIT, O_CREAT, 0660, size)) == SEM_FAILED)
+		return (ft_free(0, "Error Semaphore\n", gen));
+	if ((gen->write = sem_open(SEM_WRITE, O_CREAT, 0660, 1)) == SEM_FAILED)
+		return (ft_free(1, "Error Semaphore\n", gen));
+	if ((gen->lock = sem_open(SEM_NAME, O_CREAT, 0660, size)) == SEM_FAILED)
+		return (ft_free(2, "Error Semaphore\n", gen));
+	if (!(gen->philo = (t_philo*)malloc(sizeof(t_philo) * size)))
+		return (ft_free(3, "Malloc Error\n", gen));
+	return (gen);
+}
+
+int			main(int argc, char **argv)
+{
+	t_glob	*gen;
+	int		i;
+
+	gen = 0;
+	i = 0;
 	if (argc < 5 || argc > 6)
-		write(1, "Error number of params\n", 23);
+		ft_free(-1, "Error nbr of arguments\n", gen);
 	else if (ft_atoi(argv[1]) == 0)
-		write(1, "0 philosopher requested\n", 24);
+		ft_free(-1, "0 philosopher requested\n", gen);
 	else
 	{
-		unlink_fct();
-		size = ft_atoi(argv[1]);
-		if (!(gen = (t_glob*)malloc(sizeof(t_glob))))
-			return (0);
-		memset(gen, 0, sizeof(t_glob));
-		if ((gen->write = sem_open(SEM_WRITE, O_CREAT, 0660, 1)) == SEM_FAILED)
-			return (ft_free(1, gen));
-		if ((gen->lock = sem_open(SEM_NAME, O_CREAT, 0660, size)) == SEM_FAILED)
-			return (ft_free(2, gen));
-		if (!(gen->list_philo = (t_philo*)malloc(sizeof(t_philo) * size)))
-			return (ft_free(3, gen));
-		memset(gen->list_philo, 0, sizeof(t_philo) * size);
-		lunch_thread(argc, argv, gen, size);
-		return (ft_free(4, gen));
+		if (!(gen = unlink_fct(ft_atoi(argv[1]))))
+			return (ERROR);
+		gen->nb_philo = ft_atoi(argv[1]);
+		lunch_thread(argc, argv, gen);
+		ft_free(4, "Execution Terminee\n", gen);
+		return (BON);
 	}
-	return (0);
+	return (ERROR);
 }

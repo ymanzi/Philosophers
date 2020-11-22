@@ -5,20 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 16:14:14 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/11/22 16:14:16 by ymanzi           ###   ########.fr       */
+/*   Created: 2020/11/22 08:15:42 by ymanzi            #+#    #+#             */
+/*   Updated: 2020/11/22 08:15:44 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	check_nb_eat(t_glob *gen)
+void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
 {
-	if (gen->philo->my_meal >= gen->nb_eat)
+	if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
 	{
-		sem_wait(gen->write);
-		write_message(MEAL_MSG, gen->indice, gen);
-		exit(BON);
+		if (!f_to_eat[ind])
+		{
+			sem_wait(gen->write);
+			write_message(MEAL_MSG, ind, gen);
+			sem_post(gen->quit);
+			f_to_eat[ind] = 1;
+		}
 	}
 }
 
@@ -26,22 +30,25 @@ void	*check_death(void *elem)
 {
 	t_glob	*g;
 	int		i;
+	int		f[((t_glob*)elem)->nb_philo];
 
 	g = elem;
-	i = g->indice;
 	while (g->alive)
 	{
 		usleep(500);
 		g->time_current = get_time() - g->time_start;
-		if (g->time_current - g->philo->last_meal > g->time_die)
+		i = -1;
+		while (++i < g->nb_philo)
 		{
-			g->alive = 0;
-			sem_wait(g->write);
-			write_message(DEATH_MSG, i + 1, g);
-			break ;
+			if (g->time_current - g->philo[i].last_meal > g->time_die)
+			{
+				g->alive = 0;
+				sem_wait(g->write);
+				write_message(DEATH_MSG, i + 1, g);
+				return (elem);
+			}
+			check_nb_eat(g, i, f);
 		}
-		if (g->argc == 6)
-			check_nb_eat(g);
 	}
 	return (elem);
 }

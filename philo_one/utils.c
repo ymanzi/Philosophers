@@ -6,11 +6,11 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 16:05:26 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/10/22 14:42:50 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/11/20 08:28:49 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo.h"
 
 static int	ft_isspace(char c)
 {

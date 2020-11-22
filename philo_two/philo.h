@@ -6,6 +6,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <semaphore.h>
 
 #define ERROR 1
 #define BON 0
@@ -44,9 +47,9 @@ typedef struct	s_glob
 	long				time_start;
 	int					indice_wr;
 	int					indice_msg;
-	pthread_mutex_t		*write;
-	pthread_mutex_t		*lock;
-	pthread_mutex_t		*quit;
+	sem_t		*write;
+	sem_t		*lock;
+	sem_t		*quit;
 	t_philo				*philo;
 }				t_glob;
 
@@ -68,8 +71,8 @@ typedef struct	s_philo
 ** main.c
 */
 long	get_time(void);
-t_glob	*unlink_fct(int argc, int size);
-int		ft_free(int i, char *str, t_glob *gen);
+t_glob	*unlink_fct(int size);
+t_glob	*ft_free(int i, char *str, t_glob *gen);
 
 /*
 ** init.c
@@ -80,13 +83,13 @@ void	lunch_thread(int argc, char **argv, t_glob *gen);
 /*
 ** check.c
 */
-void	check_nb_eat(t_glob *gen, int ind);
+void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat);
 void	*check_death(void*);
 
 /*
 ** main_loop.c
 */
-t_glob	*eat_fct(int ind, t_glob *gen);
+int	eat_fct(int ind, t_glob *gen);
 t_glob	*sleep_fct(int ind, t_glob *gen);
 void	*lunch_philo(void*);
 

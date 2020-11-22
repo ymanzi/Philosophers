@@ -6,13 +6,13 @@
 #    By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/09 14:05:13 by ymanzi            #+#    #+#              #
-#    Updated: 2020/10/24 18:52:11 by ymanzi           ###   ########.fr        #
+#    Updated: 2020/11/22 13:49:15 by ymanzi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo.a
 CFLAGS = -Wall -Wextra -Werror 
-SRCS = main.c init_check.c main_loop.c utils.c write_fct.c
+SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c
 
 OBJ = $(SRCS:.c=.o)
 EXEC = philo_one

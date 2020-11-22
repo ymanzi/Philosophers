@@ -6,13 +6,13 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 19:39:06 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/10/24 16:26:18 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/11/22 16:10:56 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo.h"
 
-long	get_time(void)
+long		get_time(void)
 {
 	struct timeval	tp;
 	long			milliseconds;
@@ -23,45 +23,84 @@ long	get_time(void)
 	return (milliseconds);
 }
 
-int		ft_free(int i, t_glob *gen)
+int			ft_free(int i, char *str, t_glob *gen)
 {
-	if (i >= 3 && gen->lock)
+	if (gen->lock)
 		free(gen->lock);
-	if (i >= 2 && gen->write)
+	if (gen->philo)
+		free(gen->philo);
+	if (gen->write)
 		free(gen->write);
-	if (i >= 4 && gen->list_philo)
-		free(gen->list_philo);
-	free(gen);
+	if (gen->quit)
+		free(gen->quit);
+	if (gen)
+		free(gen);
+	write(1, str, ft_strlen(str));
 	if (i >= 4)
-		return (1);
-	return (0);
+		return (BON);
+	return (ERROR);
 }
 
-int		main(int argc, char **argv)
+static void	memzero_philo(t_glob *gen)
 {
-	int		size;
+	int	i;
+
+	i = -1;
+	while (++i < gen->nb_philo)
+	{
+		gen->philo[i].my_meal = 0;
+		gen->philo[i].info = gen;
+		gen->philo[i].last_meal = 0;
+		gen->philo[i].end_eat = 0;
+		gen->philo[i].end_sleep = 0;
+		gen->philo[i].start_eat = 0;
+		gen->philo[i].start_sleep = 0;
+		gen->philo[i].start_boucle = 0;
+		gen->philo[i].end_boucle = 0;
+	}
+}
+
+t_glob		*unlink_fct(int size)
+{
 	t_glob	*gen;
 
+	if (!(gen = (t_glob*)malloc(sizeof(t_glob)))
+	|| !(gen->philo = (t_philo*)malloc(sizeof(t_philo) * size)))
+	{
+		ft_free(-1, "Malloc Error\n", gen);
+		return (NULL);
+	}
+	if (!(gen->write = (pthread_mutex_t*)malloc(sizeof(pthread_mutex_t))) ||
+	!(gen->lock = (pthread_mutex_t*)
+				malloc(sizeof(pthread_mutex_t) * size)) ||
+	!(gen->quit = (pthread_mutex_t*)
+				malloc(sizeof(pthread_mutex_t) * size)))
+	{
+		ft_free(3, "Malloc Error\n", gen);
+		return (NULL);
+	}
+	return (gen);
+}
+
+int			main(int argc, char **argv)
+{
+	t_glob	*gen;
+	int		i;
+
+	gen = 0;
+	i = 0;
 	if (argc < 5 || argc > 6)
-		write(1, "Error number of params\n", 23);
+		ft_free(-1, "Error nbr of arguments\n", gen);
 	else if (ft_atoi(argv[1]) == 0)
-		write(1, "0 philosopher requested\n", 24);
+		ft_free(-1, "0 philosopher requested\n", gen);
 	else
 	{
-		size = ft_atoi(argv[1]);
-		if (!(gen = (t_glob*)malloc(sizeof(t_glob))))
-			return (0);
-		memset(gen, 0, sizeof(t_glob));
-		if (!(gen->write = (pthread_mutex_t*)malloc(sizeof(pthread_mutex_t))))
-			return (ft_free(1, gen));
-		if (!(gen->lock = (pthread_mutex_t*)malloc(sizeof(pthread_mutex_t)
-						* size)))
-			return (ft_free(2, gen));
-		if (!(gen->list_philo = (t_philo*)malloc(sizeof(t_philo) * size)))
-			return (ft_free(3, gen));
-		memset(gen->list_philo, 0, sizeof(t_philo) * size);
-		lunch_thread(argc, argv, gen, size);
-		return (ft_free(4, gen));
+		if (!(gen = unlink_fct(ft_atoi(argv[1]))))
+			return (ERROR);
+		gen->nb_philo = ft_atoi(argv[1]);
+		memzero_philo(gen);
+		lunch_thread(argc, argv, gen);
+		return (ft_free(4, "Execution Terminee\n", gen));
 	}
-	return (0);
+	return (ERROR);
 }

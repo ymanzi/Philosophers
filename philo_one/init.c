@@ -5,14 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 16:14:19 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/11/22 16:14:21 by ymanzi           ###   ########.fr       */
+/*   Created: 2020/11/22 08:15:50 by ymanzi            #+#    #+#             */
+/*   Updated: 2020/11/22 08:15:52 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	init_all(int argc, char **argv, t_glob *gen)
+static void	lock_mutex(t_glob *gen, int nbr)
+{
+	int	i;
+
+	i = -1;
+	if (!nbr)
+		i = 0;
+	while (++i < gen->nb_philo)
+		pthread_mutex_lock(&gen->quit[i]);
+}
+
+void		init_all(int argc, char **argv, t_glob *gen)
 {
 	int	i;
 
@@ -25,33 +36,29 @@ void	init_all(int argc, char **argv, t_glob *gen)
 	gen->time_eat = ft_atoi(argv[3]);
 	gen->time_sleep = ft_atoi(argv[4]);
 	gen->all_eat = 0;
-	gen->philo->my_meal = 0;
-	gen->philo->last_meal = 0;
-	gen->philo->indice = i;
-	gen->indice_wr = -1;
-	gen->indice_msg = -1;
+	while (++i < gen->nb_philo)
+	{
+		pthread_mutex_init(&(gen->quit[i]), NULL);
+		pthread_mutex_init(&(gen->lock[i]), NULL);
+	}
+	pthread_mutex_init(gen->write, NULL);
+	lock_mutex(gen, 0);
 }
 
-void	lunch_thread(int argc, char **argv, t_glob *gen)
+void		lunch_thread(int argc, char **argv, t_glob *gen)
 {
-	int		i;
-	pid_t	pid;
+	int			i;
+	pthread_t	t[gen->nb_philo + 1];
 
-	pid = 0;
 	i = -1;
 	init_all(argc, argv, gen);
-	sem_post(gen->write);
-	while (!pid && ++i < gen->nb_philo)
-		pid = fork();
-	if (i)
+	gen->time_start = get_time();
+	while (++i < gen->nb_philo)
 	{
-		gen->indice = i - 1;
-		pthread_create(&gen->t[0], NULL, lunch_philo, gen);
-		usleep(42);
-		pthread_create(&gen->t[1], NULL, check_death, gen);
-		sem_wait(gen->quit);
-		sem_post(gen->quit);
-		exit(BON);
+		pthread_mutex_lock(gen->quit);
+		gen->indice = i;
+		pthread_create(&t[i], NULL, lunch_philo, gen);
 	}
-	waitpid(pid, 0, 0);
+	pthread_create(&t[++i], NULL, check_death, gen);
+	lock_mutex(gen, 1);
 }
