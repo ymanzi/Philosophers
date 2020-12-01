@@ -45,9 +45,8 @@ void	ft_free(int i, char *str, t_glob *gen)
 	exit(BON);
 }
 
-t_glob	*unlink_fct(int argc, int size)
+t_glob	*unlink_fct(int size)
 {
-	int		i;
 	t_glob	*gen;
 
 	sem_unlink(SEM_WRITE);
@@ -82,7 +81,7 @@ int		main(int argc, char **argv)
 		ft_free(-1, "0 philosopher requested\n", gen);
 	else
 	{
-		gen = unlink_fct(argc, ft_atoi(argv[1]));
+		gen = unlink_fct(ft_atoi(argv[1]));
 		gen->nb_philo = ft_atoi(argv[1]);
 		lunch_thread(argc, argv, gen);
 		if (argc == 6)

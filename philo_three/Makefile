@@ -10,6 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+CC = gcc
 NAME = philo.a
 CFLAGS = -Wall -Wextra -Werror 
 SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c

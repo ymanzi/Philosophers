@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/01 16:46:52 by ymanzi            #+#    #+#             */
+/*   Updated: 2020/12/01 16:46:53 by ymanzi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #	ifndef PHILO_H
 #	define PHILO_H
 
@@ -26,12 +38,11 @@
 #define DEATH_STR " died\n"
 #define MEAL_MSG 5
 #define MEAL_STR " finished to eat\n"
-
 #define SEM_NAME "fork"
-#define	SEM_WRITE "write"
-#define	SEM_QUIT "quit"
+#define SEM_WRITE "write"
+#define SEM_QUIT "quit"
 
-typedef struct	s_philo t_philo;
+struct s_philo;
 
 typedef struct	s_glob
 {
@@ -53,7 +64,7 @@ typedef struct	s_glob
 	sem_t			*write;
 	sem_t			*lock;
 	sem_t			*quit;
-	t_philo			*philo;
+	struct s_philo	*philo;
 }				t_glob;
 
 typedef struct	s_philo
@@ -71,47 +82,41 @@ typedef struct	s_philo
 }				t_philo;
 
 /*
-** Variables Globales
+** main.c
 */
-//t_glob	*g_gen;
-//t_philo	*g_philo;
+long			get_time(void);
+void			ft_free(int i, char *str, t_glob *gen);
 
 /*
- ** main.c
- */
-long	get_time(void);
-void	ft_free(int i, char *str, t_glob *gen);
-
-/*
- ** init.c
- */
-void	init_all(int argc, char **argv, t_glob *gen);
-void	lunch_thread(int argc, char **argv, t_glob *gen);
+** init.c
+*/
+void			init_all(int argc, char **argv, t_glob *gen);
+void			lunch_thread(int argc, char **argv, t_glob *gen);
 
 /*
 ** check.c
 */
-void	check_nb_eat(t_glob *gen);
-void	*check_death(void*);
+void			check_nb_eat(t_glob *gen);
+void			*check_death(void *elem);
 
 /*
- ** main_loop.c
- */
-t_glob	*eat_fct(int ind, t_glob *gen);
-t_glob	*sleep_fct(int ind, t_glob *gen);
-void	*lunch_philo(void*);
+** main_loop.c
+*/
+t_glob			*eat_fct(int ind, t_glob *gen);
+t_glob			*sleep_fct(int ind, t_glob *gen);
+void			*lunch_philo(void *elem);
 
 /*
- ** write_fct.c
- */
-void	write_status_message(int msg, int wr, t_glob *gen);
-void	write_message(int msg, int wr, t_glob *gen);
+** write_fct.c
+*/
+void			write_status_message(int msg, int wr, t_glob *gen);
+void			write_message(int msg, int wr, t_glob *gen);
 
 /*
- **utils.c
- */
-int		ft_strlen(char *str);
-void	ft_putnbr_fd(long long n, int fd);
-int		ft_atoi(const char *nptr);
+**utils.c
+*/
+int				ft_strlen(char *str);
+void			ft_putnbr_fd(long long n, int fd);
+int				ft_atoi(const char *nptr);
 
 #	endif
