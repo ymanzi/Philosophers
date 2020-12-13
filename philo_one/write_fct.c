@@ -37,27 +37,17 @@ void		write_status_message(int msg, int wr, t_glob *gen)
 		write(1, DEATH_STR, ft_strlen(DEATH_STR));
 }
 
-static void	inter_write(int wr, t_glob *gen)
-{
-	ft_putnbr_fd((long long)gen->time_current, 1);
-	write(1, " ", 1);
-	ft_putnbr_fd((long long)wr, 1);
-	write(1, " ", 1);
-	write(1, MEAL_STR, ft_strlen(MEAL_STR));
-}
-
 void		write_message(int msg, int wr, t_glob *gen)
 {
 	int	i;
 
-	i = 0;
-	if (msg == 5)
-		inter_write(wr + 1, gen);
-	else
+	pthread_mutex_lock((gen->write));
+	i = -1;
+	if (msg != 5)
 		write_status_message(msg, wr, gen);
 	if (msg == DEATH_MSG)
 	{
-		while (i++ < gen->nb_philo)
+		while (++i < gen->nb_philo)
 			pthread_mutex_unlock(&(gen->quit[i]));
 		return ;
 	}

@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 16:14:19 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/11/22 16:14:21 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/09 17:31:38 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void	init_all(int argc, char **argv, t_glob *gen)
 	gen->indice_msg = -1;
 }
 
+void	semaphore_end(t_glob *gen)
+{
+	sem_wait(gen->quit);
+	sem_post(gen->quit);
+}
+
 void	lunch_thread(int argc, char **argv, t_glob *gen)
 {
 	int		i;
@@ -46,11 +52,11 @@ void	lunch_thread(int argc, char **argv, t_glob *gen)
 	if (i)
 	{
 		gen->indice = i - 1;
+		gen->pid = pid;
 		pthread_create(&gen->t[0], NULL, lunch_philo, gen);
 		usleep(42);
 		pthread_create(&gen->t[1], NULL, check_death, gen);
-		sem_wait(gen->quit);
-		sem_post(gen->quit);
+		semaphore_end(gen);
 		exit(BON);
 	}
 	waitpid(pid, 0, 0);

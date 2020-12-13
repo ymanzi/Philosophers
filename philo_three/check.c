@@ -16,8 +16,9 @@ void	check_nb_eat(t_glob *gen)
 {
 	if (gen->philo->my_meal >= gen->nb_eat)
 	{
-		sem_wait(gen->write);
+	//	sem_wait(gen->write);
 		write_message(MEAL_MSG, gen->indice, gen);
+		ft_free(4, "", gen);
 		exit(BON);
 	}
 }
@@ -33,10 +34,10 @@ void	*check_death(void *elem)
 	{
 		usleep(500);
 		g->time_current = get_time() - g->time_start;
-		if (g->time_current - g->philo->last_meal > g->time_die)
+		if (g->time_current - g->philo->last_meal > g->time_die
+			&& (g->argc == 5 || g->philo->my_meal < g->nb_eat))
 		{
 			g->alive = 0;
-			sem_wait(g->write);
 			write_message(DEATH_MSG, i + 1, g);
 			break ;
 		}

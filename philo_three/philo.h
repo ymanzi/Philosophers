@@ -37,10 +37,11 @@
 #define DEATH_MSG 4
 #define DEATH_STR " died\n"
 #define MEAL_MSG 5
-#define MEAL_STR " finished to eat\n"
+#define MEAL_STR "                   finished to eat\n"
 #define SEM_NAME "fork"
 #define SEM_WRITE "write"
 #define SEM_QUIT "quit"
+#define SEM_EAT "eat"
 
 struct s_philo;
 
@@ -64,11 +65,14 @@ typedef struct	s_glob
 	sem_t			*write;
 	sem_t			*lock;
 	sem_t			*quit;
+	sem_t			*eat;
+	pid_t			pid;
 	struct s_philo	*philo;
 }				t_glob;
 
 typedef struct	s_philo
 {
+	int		start;
 	int		my_meal;
 	int		indice;
 	long	start_sleep;

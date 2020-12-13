@@ -36,6 +36,7 @@
 #define SEM_NAME "fork"
 #define SEM_WRITE "write"
 #define SEM_QUIT "quit"
+#define SEM_EAT "eat"
 
 struct s_philo;
 
@@ -58,20 +59,22 @@ typedef struct	s_glob
 	pthread_mutex_t		*write;
 	pthread_mutex_t		*lock;
 	pthread_mutex_t		*quit;
+	pthread_mutex_t		*eat;
+	pthread_mutex_t		*prior;
 	struct s_philo		*philo;
 }				t_glob;
 
 typedef struct	s_philo
 {
+	int		start;
 	int		my_meal;
 	int		indice;
 	long	start_sleep;
 	long	end_sleep;
 	long	start_eat;
 	long	end_eat;
+	long	start_time;
 	t_glob	*info;
-	long	start_boucle;
-	long	end_boucle;
 	long	last_meal;
 }				t_philo;
 

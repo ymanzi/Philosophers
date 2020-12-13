@@ -14,38 +14,38 @@
 
 t_glob		*sleep_fct(int ind, t_glob *gen)
 {
-	gen->time_current = get_time() - gen->time_start;
-	gen->philo[ind].end_eat = gen->time_current - gen->philo[ind].start_eat -
-		gen->time_eat + gen->philo[ind].end_eat;
-	gen->philo[ind].start_sleep = gen->time_current;
-	sem_wait(gen->write);
+	gen->philo[ind].start_sleep = gen->philo[ind].start_eat + gen->time_eat;
 	write_message(SLEEP_MSG, ind + 1, gen);
-	usleep((gen->time_sleep - gen->philo[ind].end_sleep
-		- (gen->philo[ind].end_boucle / 2)
-		- (gen->philo[ind].end_boucle % 2)) * 1000);
+	while (1)
+	{
+		usleep(500);
+		if (gen->time_current - gen->philo[ind].start_sleep >= (gen->time_sleep))
+			return (gen);
+	}
 	return (gen);
 }
 
 int			eat_fct(int ind, t_glob *gen)
 {
-	gen->time_current = get_time() - gen->time_start;
 	sem_wait(gen->lock);
-	if (gen->nb_philo > 1)
-		sem_wait(gen->lock);
+	sem_wait(gen->lock);
+	if (gen->philo[ind].start == -1)
+		gen->philo[ind].start = gen->time_current - (gen->time_current % gen->time_eat);
+	gen->philo[ind].start_eat = gen->time_current - (gen->time_current % (gen->time_eat + gen->time_sleep)) + gen->philo[ind].start; // gen->time_current;
 	gen->time_current = get_time() - gen->time_start;
 	gen->philo[ind].last_meal = gen->time_current;
-	sem_wait(gen->write);
 	write_message(EAT_MSG, ind + 1, gen);
-	if (gen->philo[ind].start_boucle)
-		gen->philo[ind].end_boucle = gen->time_current -
-		gen->philo[ind].start_boucle + gen->philo[ind].end_boucle;
-	gen->philo[ind].start_eat = gen->time_current;
-	usleep((gen->time_eat - gen->philo[ind].end_eat -
-	(gen->philo[ind].end_boucle / 2)) * 1000);
+	while (1)
+	{
+		usleep(500);
+		if (gen->time_current - gen->philo[ind].start_eat >= (gen->time_eat))
+			break ;
+	}
 	gen->philo[ind].my_meal += 1;
 	sem_post(gen->lock);
-	if (gen->nb_philo > 1)
-		sem_post(gen->lock);
+	sem_post(gen->lock);
+	if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
+		sem_wait(gen->eat);
 	return (1);
 }
 
@@ -69,6 +69,7 @@ static void	memzero_philo(t_glob *gen, int i)
 	gen->philo[i].start_sleep = 0;
 	gen->philo[i].start_boucle = 0;
 	gen->philo[i].end_boucle = 0;
+	gen->philo[i].start = -1;
 }
 
 void		*lunch_philo(void *elem)
@@ -81,6 +82,7 @@ void		*lunch_philo(void *elem)
 	unlock_semaphore(gen);
 	memzero_philo(gen, ind);
 	gen->time_start = get_time();
+	gen->time_current = get_time() - gen->time_start;
 	while (gen->alive)
 	{
 		if (!(eat_fct(ind, gen)))
@@ -89,10 +91,6 @@ void		*lunch_philo(void *elem)
 		if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
 			return (gen);
 		gen->time_current = get_time() - gen->time_start;
-		gen->philo[ind].end_sleep = gen->time_current -
-	gen->philo[ind].start_sleep - gen->time_sleep + gen->philo[ind].end_sleep;
-		gen->philo[ind].start_boucle = gen->time_current;
-		sem_wait(gen->write);
 		write_message(THINK_MSG, ind + 1, gen);
 	}
 	return (elem);

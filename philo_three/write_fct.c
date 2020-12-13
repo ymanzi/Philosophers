@@ -37,28 +37,31 @@ void		write_status_message(int msg, int wr, t_glob *gen)
 		write(1, DEATH_STR, ft_strlen(DEATH_STR));
 }
 
-static void	inter_write(int wr, t_glob *gen)
+static void	inter_write(t_glob *gen)
 {
-	ft_putnbr_fd((long long)gen->time_current, 1);
-	write(1, " ", 1);
-	ft_putnbr_fd((long long)wr, 1);
-	write(1, " ", 1);
-	write(1, MEAL_STR, ft_strlen(MEAL_STR));
+	sem_post(gen->write);
+	if (gen->pid)
+		waitpid(gen->pid, 0, 0);
 }
 
 void		write_message(int msg, int wr, t_glob *gen)
 {
 	int	i;
 
+	sem_wait(gen->write);
 	i = 0;
 	if (msg == 5)
-		inter_write(wr + 1, gen);
+		inter_write(gen);
 	else
 		write_status_message(msg, wr, gen);
 	if (msg == DEATH_MSG)
 	{
 		sem_post(gen->quit);
+		if (gen->pid)
+			waitpid(gen->pid, 0, 0);
+		ft_free(4, "", gen);
 		exit(BON);
 	}
-	sem_post(gen->write);
+	if (msg != MEAL_MSG)
+		sem_post(gen->write);
 }

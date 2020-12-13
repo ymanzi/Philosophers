@@ -25,14 +25,18 @@ long		get_time(void)
 
 int			ft_free(int i, char *str, t_glob *gen)
 {
-	if (gen->lock)
+	if (gen && gen->lock)
 		free(gen->lock);
-	if (gen->philo)
+	if (gen && gen->philo)
 		free(gen->philo);
-	if (gen->write)
+	if (gen && gen->write)
 		free(gen->write);
-	if (gen->quit)
+	if (gen && gen->quit)
 		free(gen->quit);
+	if (gen && gen->eat)
+		free(gen->eat);
+	if (gen && gen->prior)
+		free(gen->prior);
 	if (gen)
 		free(gen);
 	write(1, str, ft_strlen(str));
@@ -55,8 +59,7 @@ static void	memzero_philo(t_glob *gen)
 		gen->philo[i].end_sleep = 0;
 		gen->philo[i].start_eat = 0;
 		gen->philo[i].start_sleep = 0;
-		gen->philo[i].start_boucle = 0;
-		gen->philo[i].end_boucle = 0;
+		gen->philo[i].start = -1;
 	}
 }
 
@@ -74,7 +77,11 @@ t_glob		*unlink_fct(int size)
 	!(gen->lock = (pthread_mutex_t*)
 				malloc(sizeof(pthread_mutex_t) * size)) ||
 	!(gen->quit = (pthread_mutex_t*)
-				malloc(sizeof(pthread_mutex_t) * size)))
+				malloc(sizeof(pthread_mutex_t) * size)) ||
+	!(gen->eat = (pthread_mutex_t*)
+				malloc(sizeof(pthread_mutex_t) * 1)) ||
+	!(gen->prior = (pthread_mutex_t*)
+				malloc(sizeof(pthread_mutex_t) * ((size / 3)))))
 	{
 		ft_free(3, "Malloc Error\n", gen);
 		return (NULL);
@@ -91,8 +98,10 @@ int			main(int argc, char **argv)
 	i = 0;
 	if (argc < 5 || argc > 6)
 		ft_free(-1, "Error nbr of arguments\n", gen);
-	else if (ft_atoi(argv[1]) == 0)
-		ft_free(-1, "0 philosopher requested\n", gen);
+	else if (ft_atoi(argv[1]) <= 1)
+		ft_free(-1, "2 philosopher is the minimum\n", gen);
+	else if (argc == 6 && !ft_atoi(argv[5]))
+		ft_free(-1, "", gen);
 	else
 	{
 		if (!(gen = unlink_fct(ft_atoi(argv[1]))))
@@ -100,7 +109,7 @@ int			main(int argc, char **argv)
 		gen->nb_philo = ft_atoi(argv[1]);
 		memzero_philo(gen);
 		lunch_thread(argc, argv, gen);
-		return (ft_free(4, "Execution Terminee\n", gen));
+		return (ft_free(4, "", gen));
 	}
 	return (ERROR);
 }

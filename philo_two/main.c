@@ -27,7 +27,7 @@ t_glob		*ft_free(int i, char *str, t_glob *gen)
 {
 	if (i)
 		;
-	if (gen->philo)
+	if (gen && gen->philo)
 		free(gen->philo);
 	sem_unlink(SEM_WRITE);
 	sem_unlink(SEM_NAME);
@@ -45,6 +45,7 @@ t_glob		*unlink_fct(int size)
 	sem_unlink(SEM_WRITE);
 	sem_unlink(SEM_NAME);
 	sem_unlink(SEM_QUIT);
+	sem_unlink(SEM_EAT);
 	if (!(gen = (t_glob*)malloc(sizeof(t_glob))))
 		return (ft_free(-1, "Malloc Error\n", gen));
 	memset(gen, 0, sizeof(t_glob));
@@ -54,8 +55,11 @@ t_glob		*unlink_fct(int size)
 		return (ft_free(1, "Error Semaphore\n", gen));
 	if ((gen->lock = sem_open(SEM_NAME, O_CREAT, 0660, size)) == SEM_FAILED)
 		return (ft_free(2, "Error Semaphore\n", gen));
+	if ((gen->eat = sem_open(SEM_EAT, O_CREAT, 0660, 1)) == SEM_FAILED)
+		ft_free(2, "Error Semaphore\n", gen);
 	if (!(gen->philo = (t_philo*)malloc(sizeof(t_philo) * size)))
 		return (ft_free(3, "Malloc Error\n", gen));
+	sem_wait(gen->eat);
 	return (gen);
 }
 
@@ -68,15 +72,17 @@ int			main(int argc, char **argv)
 	i = 0;
 	if (argc < 5 || argc > 6)
 		ft_free(-1, "Error nbr of arguments\n", gen);
-	else if (ft_atoi(argv[1]) == 0)
-		ft_free(-1, "0 philosopher requested\n", gen);
+	else if (ft_atoi(argv[1]) <= 1)
+		ft_free(-1, "2 philosopher is the minimum\n", gen);
+	else if (argc == 6 && !ft_atoi(argv[5]))
+		ft_free(-1, "", gen);
 	else
 	{
 		if (!(gen = unlink_fct(ft_atoi(argv[1]))))
 			return (ERROR);
 		gen->nb_philo = ft_atoi(argv[1]);
 		lunch_thread(argc, argv, gen);
-		ft_free(4, "Execution Terminee\n", gen);
+		ft_free(4, "", gen);
 		return (BON);
 	}
 	return (ERROR);
