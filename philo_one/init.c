@@ -43,9 +43,6 @@ void		init_all(int argc, char **argv, t_glob *gen)
 		pthread_mutex_init(&(gen->quit[i]), NULL);
 		pthread_mutex_init(&(gen->lock[i]), NULL);
 	}
-	i = -1;
-	while (++i < (gen->nb_philo / 3))
-		pthread_mutex_init(&(gen->prior[i]), NULL);
 	pthread_mutex_init(gen->write, NULL);
 	pthread_mutex_init(gen->eat, NULL);
 	lock_mutex(gen, 0);

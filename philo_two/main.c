@@ -32,6 +32,7 @@ t_glob		*ft_free(int i, char *str, t_glob *gen)
 	sem_unlink(SEM_WRITE);
 	sem_unlink(SEM_NAME);
 	sem_unlink(SEM_QUIT);
+	sem_unlink(SEM_EAT);
 	if (gen)
 		free(gen);
 	write(1, str, ft_strlen(str));

@@ -19,73 +19,15 @@ t_glob		*sleep_fct(int ind, t_glob *gen)
 	while (1)
 	{
 		usleep(500);
-		if (gen->time_current - gen->philo[ind].start_sleep >= (gen->time_sleep))
+		if (gen->time_current - gen->philo[ind].start_sleep
+			>= (gen->time_sleep))
 			return (gen);
 	}
 	return (gen);
 }
-#include <stdio.h>
 
-static void	i_eat_not_even(int ind, t_glob *gen, int mode)
+static void	init_eat(int ind, t_glob *gen, int mode)
 {
-printf("NOTEVEN\n");
-	if (mode == 0)
-	{
-		pthread_mutex_lock(&(gen->prior[ind / 3]));
-		pthread_mutex_lock(&(gen->lock[ind]));
-		if ((ind - 1) < 0)
-			pthread_mutex_lock(&(gen->lock[gen->nb_philo - 1]));
-		else
-			pthread_mutex_lock(&(gen->lock[ind - 1]));
-		pthread_mutex_unlock(&(gen->prior[ind / 3]));	
-	}
-	else
-	{
-		pthread_mutex_unlock(&(gen->lock[ind]));
-		if ((ind - 1) < 0)
-			pthread_mutex_unlock(&(gen->lock[gen->nb_philo - 1]));
-		else
-			pthread_mutex_unlock(&(gen->lock[ind - 1]));
-		if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
-			pthread_mutex_lock(gen->eat);
-	}
-}
-/*
-static void	i_eat_not_even(int ind, t_glob *gen, int mode)
-{
-	if (mode == 0)
-	{
-		if (ind + 1 == gen->nb_philo)
-		{
-			if ((ind + 1) == gen->nb_philo)
-				pthread_mutex_lock(&(gen->lock[0]));
-			else
-				pthread_mutex_lock(&(gen->lock[ind + 1]));
-			pthread_mutex_lock(&(gen->lock[ind]));
-			return ;
-		}
-		pthread_mutex_lock(&(gen->lock[ind]));
-		if ((ind + 1) == gen->nb_philo)
-			pthread_mutex_lock(&(gen->lock[0]));
-		else
-			pthread_mutex_lock(&(gen->lock[ind + 1]));
-	}
-	else
-	{
-		pthread_mutex_unlock(&(gen->lock[ind]));
-		if ((ind + 1) == gen->nb_philo)
-			pthread_mutex_unlock(&(gen->lock[0]));
-		else
-			pthread_mutex_unlock(&(gen->lock[ind + 1]));
-		if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
-			pthread_mutex_lock(gen->eat);
-	}
-}
-
-*/
-static void	i_eat_even(int ind, t_glob *gen, int mode)
-{
-printf("EVEN\n");
 	if (mode == 0)
 	{
 		pthread_mutex_lock(&(gen->lock[ind]));
@@ -106,17 +48,29 @@ printf("EVEN\n");
 	}
 }
 
-
-int			eat_fct(int ind, t_glob *gen)
+static void	eat_time_start(int ind, t_glob *gen)
 {
-	(gen->nb_philo % 2) ? i_eat_not_even(ind, gen, 0): i_eat_even(ind, gen, 0);
 	if (gen->philo[ind].start == -1)
 	{
-		gen->philo[ind].start = gen->time_current - (gen->time_current % gen->time_eat);
+		gen->philo[ind].start = gen->time_current -
+			(gen->time_current % gen->time_eat);
 		gen->philo[ind].start_eat = gen->philo[ind].start;
 	}
 	else
-		gen->philo[ind].start_eat = gen->philo[ind].start_eat + gen->time_eat + gen->time_sleep; // gen->time_current;
+	{
+		if (gen->nb_philo % 2)
+			gen->philo[ind].start_eat = gen->philo[ind].start_eat +
+				2 * gen->time_eat + gen->time_sleep;
+		else
+			gen->philo[ind].start_eat = gen->philo[ind].start_eat +
+				gen->time_eat + gen->time_sleep;
+	}
+}
+
+int			eat_fct(int ind, t_glob *gen)
+{
+	init_eat(ind, gen, 0);
+	eat_time_start(ind, gen);
 	gen->time_current = get_time() - gen->time_start;
 	gen->philo[ind].last_meal = gen->time_current;
 	write_message(EAT_MSG, ind + 1, gen);
@@ -127,7 +81,7 @@ int			eat_fct(int ind, t_glob *gen)
 			break ;
 	}
 	gen->philo[ind].my_meal += 1;
-	(gen->nb_philo % 2) ? i_eat_not_even(ind, gen, 1): i_eat_even(ind, gen, 1);
+	init_eat(ind, gen, 1);
 	return (1);
 }
 

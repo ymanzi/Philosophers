@@ -11,19 +11,17 @@
 # **************************************************************************** #
 
 CC = gcc
-NAME = philo.a
+NAME = philo_one
 CFLAGS = -Wall -Wextra -Werror 
 SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c
-
 OBJ = $(SRCS:.c=.o)
-EXEC = philo_one
 
-all:
-	gcc $(CFLAGS) $(SRCS) -o $(EXEC)
+all: $(NAME)
 
 $(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
+		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
-		rm -f $(EXEC)
+		rm -f $(OBJ)
 fclean: clean
+	rm -rf $(NAME)
 re: fclean all

@@ -18,14 +18,13 @@ void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
 	{
 		if (!f_to_eat[ind])
 		{
-		//	pthread_mutex_lock((gen->write));
 			write_message(MEAL_MSG, ind, gen);
 			pthread_mutex_unlock(&(gen->quit[ind]));
 			f_to_eat[ind] = 1;
 		}
 	}
 }
-//#include <stdio.h>
+
 void	*check_death(void *elem)
 {
 	t_glob	*g;
@@ -43,9 +42,7 @@ void	*check_death(void *elem)
 			if (g->time_current - g->philo[i].last_meal > g->time_die
 			&& (g->argc == 5 || g->philo[i].my_meal < g->nb_eat))
 			{
-			//	printf("CHECCCKKKKKKKK\n");
 				g->alive = 0;
-			//	pthread_mutex_lock((g->write));
 				write_message(DEATH_MSG, i + 1, g);
 				return (elem);
 			}

@@ -35,8 +35,6 @@ int			ft_free(int i, char *str, t_glob *gen)
 		free(gen->quit);
 	if (gen && gen->eat)
 		free(gen->eat);
-	if (gen && gen->prior)
-		free(gen->prior);
 	if (gen)
 		free(gen);
 	write(1, str, ft_strlen(str));
@@ -79,9 +77,7 @@ t_glob		*unlink_fct(int size)
 	!(gen->quit = (pthread_mutex_t*)
 				malloc(sizeof(pthread_mutex_t) * size)) ||
 	!(gen->eat = (pthread_mutex_t*)
-				malloc(sizeof(pthread_mutex_t) * 1)) ||
-	!(gen->prior = (pthread_mutex_t*)
-				malloc(sizeof(pthread_mutex_t) * ((size / 3)))))
+				malloc(sizeof(pthread_mutex_t) * 1)))
 	{
 		ft_free(3, "Malloc Error\n", gen);
 		return (NULL);

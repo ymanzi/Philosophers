@@ -18,7 +18,6 @@ void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
 	{
 		if (!f_to_eat[ind])
 		{
-		//	sem_wait(gen->write);
 			write_message(MEAL_MSG, ind, gen);
 			sem_post(gen->quit);
 			f_to_eat[ind] = 1;
@@ -44,7 +43,6 @@ void	*check_death(void *elem)
 			&& (g->argc == 5 || g->philo[i].my_meal < g->nb_eat))
 			{
 				g->alive = 0;
-			//	sem_wait(g->write);
 				write_message(DEATH_MSG, i + 1, g);
 				return (elem);
 			}

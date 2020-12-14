@@ -32,10 +32,18 @@ void	init_all(int argc, char **argv, t_glob *gen)
 	gen->indice_msg = -1;
 }
 
-void	semaphore_end(t_glob *gen)
+void	semaphore_end(t_glob *gen, int indice)
 {
-	sem_wait(gen->quit);
-	sem_post(gen->quit);
+	if (indice)
+	{
+		sem_wait(gen->quit);
+		sem_post(gen->quit);
+	}
+	else
+	{
+		sem_wait(gen->eat);
+		sem_post(gen->eat);
+	}
 }
 
 void	lunch_thread(int argc, char **argv, t_glob *gen)
@@ -55,8 +63,12 @@ void	lunch_thread(int argc, char **argv, t_glob *gen)
 		gen->pid = pid;
 		pthread_create(&gen->t[0], NULL, lunch_philo, gen);
 		usleep(42);
+		if (i != gen->nb_philo)
+			semaphore_end(gen, 0);
 		pthread_create(&gen->t[1], NULL, check_death, gen);
-		semaphore_end(gen);
+		if (i == gen->nb_philo)
+			sem_wait(gen->eat);
+		semaphore_end(gen, 1);
 		exit(BON);
 	}
 	waitpid(pid, 0, 0);

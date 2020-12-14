@@ -19,19 +19,38 @@ t_glob		*sleep_fct(int ind, t_glob *gen)
 	while (1)
 	{
 		usleep(500);
-		if (gen->time_current - gen->philo[ind].start_sleep >= (gen->time_sleep))
+		if (gen->time_current - gen->philo[ind].start_sleep
+			>= (gen->time_sleep))
 			return (gen);
 	}
 	return (gen);
+}
+
+static void	eat_time_start(int ind, t_glob *gen)
+{
+	if (gen->philo[ind].start == -1)
+	{
+		gen->philo[ind].start = gen->time_current -
+			(gen->time_current % gen->time_eat);
+		gen->philo[ind].start_eat = gen->philo[ind].start;
+	}
+	else
+	{
+		if (((gen->time_current - gen->philo[ind].start_eat) %
+		(gen->time_eat + gen->time_sleep) < 10))
+			gen->philo[ind].start_eat = gen->philo[ind].start_eat +
+				gen->time_eat + gen->time_sleep;
+		else
+			gen->philo[ind].start_eat = gen->philo[ind].start_eat +
+				2 * gen->time_eat + gen->time_sleep;
+	}
 }
 
 int			eat_fct(int ind, t_glob *gen)
 {
 	sem_wait(gen->lock);
 	sem_wait(gen->lock);
-	if (gen->philo[ind].start == -1)
-		gen->philo[ind].start = gen->time_current - (gen->time_current % gen->time_eat);
-	gen->philo[ind].start_eat = gen->time_current - (gen->time_current % (gen->time_eat + gen->time_sleep)) + gen->philo[ind].start; // gen->time_current;
+	eat_time_start(ind, gen);
 	gen->time_current = get_time() - gen->time_start;
 	gen->philo[ind].last_meal = gen->time_current;
 	write_message(EAT_MSG, ind + 1, gen);
@@ -58,20 +77,6 @@ static void	unlock_semaphore(t_glob *gen)
 		sem_post(gen->quit);
 }
 
-static void	memzero_philo(t_glob *gen, int i)
-{
-	gen->philo[i].my_meal = 0;
-	gen->philo[i].info = gen;
-	gen->philo[i].last_meal = 0;
-	gen->philo[i].end_eat = 0;
-	gen->philo[i].end_sleep = 0;
-	gen->philo[i].start_eat = 0;
-	gen->philo[i].start_sleep = 0;
-	gen->philo[i].start_boucle = 0;
-	gen->philo[i].end_boucle = 0;
-	gen->philo[i].start = -1;
-}
-
 void		*lunch_philo(void *elem)
 {
 	int		ind;
@@ -80,7 +85,6 @@ void		*lunch_philo(void *elem)
 	gen = (t_glob*)elem;
 	ind = gen->indice;
 	unlock_semaphore(gen);
-	memzero_philo(gen, ind);
 	gen->time_start = get_time();
 	gen->time_current = get_time() - gen->time_start;
 	while (gen->alive)

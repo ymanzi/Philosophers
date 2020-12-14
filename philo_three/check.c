@@ -16,7 +16,6 @@ void	check_nb_eat(t_glob *gen)
 {
 	if (gen->philo->my_meal >= gen->nb_eat)
 	{
-	//	sem_wait(gen->write);
 		write_message(MEAL_MSG, gen->indice, gen);
 		ft_free(4, "", gen);
 		exit(BON);
