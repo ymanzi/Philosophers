@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 19:39:06 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/11/22 16:10:56 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/16 14:57:00 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int			main(int argc, char **argv)
 		ft_free(-1, "Error nbr of arguments\n", gen);
 	else if (ft_atoi(argv[1]) <= 1)
 		ft_free(-1, "2 philosopher is the minimum\n", gen);
-	else if (argc == 6 && !ft_atoi(argv[5]))
+	else if (argc == 6 && ft_atoi(argv[5]) <= 0)
 		ft_free(-1, "", gen);
 	else
 	{
