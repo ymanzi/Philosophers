@@ -42,13 +42,14 @@ static void	inter_write(t_glob *gen)
 	sem_post(gen->write);
 	if (gen->pid)
 		waitpid(gen->pid, 0, 0);
+	ft_free(4, "", gen);
+	exit(BON);
 }
 
 void		write_message(int msg, int wr, t_glob *gen)
 {
 	int	i;
 
-	sem_wait(gen->write);
 	i = 0;
 	if (msg == 5)
 		inter_write(gen);
@@ -62,6 +63,4 @@ void		write_message(int msg, int wr, t_glob *gen)
 		ft_free(4, "", gen);
 		exit(BON);
 	}
-	if (msg != MEAL_MSG)
-		sem_post(gen->write);
 }

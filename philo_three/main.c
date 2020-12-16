@@ -78,10 +78,8 @@ int		main(int argc, char **argv)
 	i = -1;
 	if (argc < 5 || argc > 6)
 		ft_free(-1, "Error nbr of arguments\n", gen);
-	else if (ft_atoi(argv[1]) <= 1)
-		ft_free(-1, "2 philosopher is the minimum\n", gen);
-	else if (argc == 6 && !ft_atoi(argv[5]))
-		ft_free(-1, "", gen);
+	else if (ft_atoi(argv[1]) <= 0)
+		ft_free(-1, "1 philosopher is the minimum\n", gen);
 	else
 	{
 		gen = unlink_fct(ft_atoi(argv[1]));

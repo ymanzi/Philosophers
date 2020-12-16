@@ -62,9 +62,7 @@ void	lunch_thread(int argc, char **argv, t_glob *gen)
 		gen->indice = i - 1;
 		gen->pid = pid;
 		pthread_create(&gen->t[0], NULL, lunch_philo, gen);
-		usleep(42);
-		if (i != gen->nb_philo)
-			semaphore_end(gen, 0);
+		semaphore_end(gen, 0);
 		pthread_create(&gen->t[1], NULL, check_death, gen);
 		if (i == gen->nb_philo)
 			sem_wait(gen->eat);

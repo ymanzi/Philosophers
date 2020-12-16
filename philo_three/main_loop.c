@@ -6,24 +6,11 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 19:18:15 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/10/24 15:18:54 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/16 12:37:12 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-t_glob		*sleep_fct(int ind, t_glob *gen)
-{
-	gen->philo->start_sleep = gen->philo->start_eat + gen->time_eat;
-	write_message(SLEEP_MSG, ind + 1, gen);
-	while (1)
-	{
-		usleep(500);
-		if (gen->time_current - gen->philo->start_sleep >= (gen->time_sleep))
-			return (gen);
-	}
-	return (gen);
-}
 
 static void	memzero_philo(t_glob *gen)
 {
@@ -34,20 +21,22 @@ static void	memzero_philo(t_glob *gen)
 	gen->philo->start_boucle = 0;
 	gen->philo->end_boucle = 0;
 	gen->philo->start = -1;
+	gen->philo->print = 0;
 }
 
 static void	eat_time_start(t_glob *gen)
 {
+	gen->time_current = get_time() - gen->time_start;
 	if (gen->philo->start == -1)
 	{
-		gen->philo->start = gen->time_current -
-			(gen->time_current % gen->time_eat);
+		gen->philo->start = gen->time_current + 40 -
+			((gen->time_current + 40) % gen->time_eat);
 		gen->philo->start_eat = gen->philo->start;
 	}
 	else
 	{
 		if (((gen->time_current - gen->philo->start_eat) %
-		(gen->time_eat + gen->time_sleep) < 20))
+		(gen->time_eat + gen->time_sleep) < 40))
 			gen->philo->start_eat = gen->philo->start_eat +
 				gen->time_eat + gen->time_sleep;
 		else
@@ -56,25 +45,35 @@ static void	eat_time_start(t_glob *gen)
 	}
 }
 
-t_glob		*eat_fct(int ind, t_glob *gen)
+t_glob		*eat_fct(t_glob *gen)
 {
-	sem_wait(gen->lock);
-	sem_wait(gen->lock);
-	eat_time_start(gen);
 	gen->time_current = get_time() - gen->time_start;
-	gen->philo->last_meal = gen->time_current;
-	write_message(EAT_MSG, ind + 1, gen);
-	while (1)
-	{
+	sem_wait(gen->lock);
+	sem_wait(gen->lock);
+	gen->time_current = get_time() - gen->time_start;
+	eat_time_start(gen);
+	gen->philo->last_meal = gen->philo->start_eat;
+	add_write(EAT_MSG, gen);
+	while (gen->philo->start_eat + gen->time_eat > gen->time_current)
 		usleep(500);
-		if (gen->time_current - gen->philo->start_eat >= (gen->time_eat))
-			break ;
-	}
 	gen->philo->my_meal += 1;
 	sem_post(gen->lock);
 	sem_post(gen->lock);
 	if (gen->argc == 6 && gen->philo->my_meal >= gen->nb_eat)
 		sem_wait(gen->eat);
+	return (gen);
+}
+
+t_glob		*sleep_fct(t_glob *gen)
+{
+	gen->time_current = get_time() - gen->time_start;
+	gen->philo->start_sleep = gen->philo->last_meal + gen->time_eat;
+	add_write(SLEEP_MSG, gen);
+	while (gen->philo->start_sleep + gen->time_sleep > gen->time_current)
+	{
+		gen->time_current = get_time() - gen->time_start;
+		usleep(500);
+	}
 	return (gen);
 }
 
@@ -94,15 +93,11 @@ void		*lunch_philo(void *elem)
 		sem_post(gen->eat);
 	}
 	gen->time_start = get_time();
-	gen->time_current = get_time() - gen->time_start;
 	while (gen->alive)
 	{
-		gen = eat_fct(ind, gen);
-		if (!gen->alive)
-			break ;
-		gen = sleep_fct(ind, gen);
-		gen->time_current = get_time() - gen->time_start;
-		write_message(THINK_MSG, ind + 1, gen);
+		gen = eat_fct(gen);
+		gen = sleep_fct(gen);
+		add_write(THINK_MSG, gen);
 	}
 	return (elem);
 }

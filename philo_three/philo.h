@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:46:52 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/12/01 16:46:53 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/16 13:44:15 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@
 
 struct s_philo;
 
+typedef struct	s_list
+{
+	int				i;
+	struct s_list	*next;
+}				t_list;
+
 typedef struct	s_glob
 {
 	int				all_eat;
@@ -72,17 +78,20 @@ typedef struct	s_glob
 
 typedef struct	s_philo
 {
-	int		start;
 	int		my_meal;
 	int		indice;
 	long	start_sleep;
+	long	start_sleep2;
 	long	end_sleep;
 	long	start_eat;
+	long	start_eat2;
 	long	end_eat;
+	long	start;
 	t_glob	*info;
 	long	start_boucle;
 	long	end_boucle;
 	long	last_meal;
+	t_list	*print;
 }				t_philo;
 
 /*
@@ -96,6 +105,7 @@ void			ft_free(int i, char *str, t_glob *gen);
 */
 void			init_all(int argc, char **argv, t_glob *gen);
 void			lunch_thread(int argc, char **argv, t_glob *gen);
+void			semaphore_end(t_glob *gen, int indice);
 
 /*
 ** check.c
@@ -106,8 +116,8 @@ void			*check_death(void *elem);
 /*
 ** main_loop.c
 */
-t_glob			*eat_fct(int ind, t_glob *gen);
-t_glob			*sleep_fct(int ind, t_glob *gen);
+t_glob			*eat_fct(t_glob *gen);
+t_glob			*sleep_fct(t_glob *gen);
 void			*lunch_philo(void *elem);
 
 /*
@@ -122,5 +132,14 @@ void			write_message(int msg, int wr, t_glob *gen);
 int				ft_strlen(char *str);
 void			ft_putnbr_fd(long long n, int fd);
 int				ft_atoi(const char *nptr);
+
+/*
+** List.c
+*/
+t_list			*ft_lstnew(int content);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_back(t_list **alst, t_list *new);
+void			ft_lstclear(t_list **lst);
+void			add_write(int elem, t_glob *gen);
 
 #	endif

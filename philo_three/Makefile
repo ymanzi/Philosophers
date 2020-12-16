@@ -12,8 +12,8 @@
 
 CC = gcc
 NAME = philo_three
-CFLAGS = -Wall -Wextra -Werror 
-SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c
+CFLAGS = -g -Wall -Wextra -Werror 
+SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c list.c
 OBJ = $(SRCS:.c=.o)
 
 all: $(NAME)
