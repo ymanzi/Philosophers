@@ -63,6 +63,7 @@ typedef struct	s_glob
 	sem_t				*lock;
 	sem_t				*quit;
 	sem_t				*eat;
+	pthread_t			*t;
 	struct s_philo		*philo;
 }				t_glob;
 

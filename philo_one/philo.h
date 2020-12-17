@@ -60,6 +60,7 @@ typedef struct	s_glob
 	pthread_mutex_t		*lock;
 	pthread_mutex_t		*quit;
 	pthread_mutex_t		*eat;
+	pthread_t 			*t;
 	struct s_philo		*philo;
 }				t_glob;
 

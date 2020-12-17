@@ -67,7 +67,7 @@ typedef struct	s_glob
 	long			time_start;
 	int				indice_wr;
 	int				indice_msg;
-	pthread_t		t[4];
+	pthread_t		t[2];
 	sem_t			*write;
 	sem_t			*lock;
 	sem_t			*quit;

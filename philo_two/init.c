@@ -60,7 +60,6 @@ void		init_all(int argc, char **argv, t_glob *gen)
 void		lunch_thread(int argc, char **argv, t_glob *gen)
 {
 	int			i;
-	pthread_t	t[gen->nb_philo + 1];
 
 	i = -1;
 	init_all(argc, argv, gen);
@@ -69,9 +68,9 @@ void		lunch_thread(int argc, char **argv, t_glob *gen)
 	{
 		lock_semaphore(gen);
 		gen->indice = i;
-		pthread_create(&t[i], NULL, lunch_philo, gen);
+		pthread_create(&(gen->t[i]), NULL, lunch_philo, gen);
 	}
-	pthread_create(&t[++i], NULL, check_death, gen);
+	pthread_create(&(gen->t[++i]), NULL, check_death, gen);
 	lock_semaphore(gen);
 	lock_semaphore(gen);
 }
