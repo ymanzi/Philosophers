@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "philo.h"
 
 void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)

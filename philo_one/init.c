@@ -12,7 +12,6 @@
 
 #include "philo.h"
 
-
 static void	lock_mutex(t_glob *gen, int nbr)
 {
 	int	i;

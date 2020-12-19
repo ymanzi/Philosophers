@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "philo.h"
 
 void		write_status_message(int msg, int wr, t_glob *gen)

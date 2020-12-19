@@ -12,7 +12,6 @@
 
 #include "philo.h"
 
-
 t_glob		*sleep_fct(int ind, t_glob *gen)
 {
 	gen->philo[ind].start_sleep = gen->philo[ind].start_eat + gen->time_eat;
