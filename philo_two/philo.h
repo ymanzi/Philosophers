@@ -98,7 +98,6 @@ void			lunch_thread(int argc, char **argv, t_glob *gen);
 /*
 ** check.c
 */
-void			check_nb_eat(t_glob *gen, int ind, int *f_to_eat);
 void			*check_death(void *elem);
 
 /*

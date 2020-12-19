@@ -12,16 +12,12 @@
 
 #include "philo.h"
 
-void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
+void	check_nb_eat(t_glob *gen, int ind)
 {
-	if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
+	if (gen->argc == 6 && gen->philo[ind].my_meal == gen->nb_eat)
 	{
-		if (!f_to_eat[ind])
-		{
-			write_message(MEAL_MSG, ind, gen);
-			pthread_mutex_unlock(&(gen->quit[ind]));
-			f_to_eat[ind] = 1;
-		}
+		write_message(MEAL_MSG, ind, gen);
+		pthread_mutex_unlock(&(gen->quit[ind]));
 	}
 }
 
@@ -29,7 +25,6 @@ void	*check_death(void *elem)
 {
 	t_glob	*g;
 	int		i;
-	int		f[((t_glob*)elem)->nb_philo];
 
 	g = elem;
 	while (g->alive)
@@ -46,7 +41,7 @@ void	*check_death(void *elem)
 				write_message(DEATH_MSG, i + 1, g);
 				return (elem);
 			}
-			check_nb_eat(g, i, f);
+			check_nb_eat(g, i);
 		}
 	}
 	return (elem);
