@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 19:39:06 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/12/16 14:57:34 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/19 11:26:14 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ t_glob		*unlink_fct(int size)
 	if ((gen->eat = sem_open(SEM_EAT, O_CREAT, 0660, 1)) == SEM_FAILED)
 		ft_free(2, "Error Semaphore\n", gen);
 	if (!(gen->philo = (t_philo*)malloc(sizeof(t_philo) * size)) ||
-	!(gen->t = (pthread_t*)malloc(sizeof(pthread_t) * (size + 1))))
+	!(gen->t = (pthread_t*)malloc(sizeof(pthread_t) * (size + 2))))
 		return (ft_free(3, "Malloc Error\n", gen));
 	sem_wait(gen->eat);
 	return (gen);
