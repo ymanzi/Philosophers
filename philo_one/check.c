@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 08:15:42 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/11/22 08:15:44 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/19 11:17:24 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
 		}
 	}
 }
+
 
 void	*check_death(void *elem)
 {
