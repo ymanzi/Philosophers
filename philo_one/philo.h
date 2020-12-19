@@ -6,7 +6,7 @@
 /*   By: ymanzi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:46:33 by ymanzi            #+#    #+#             */
-/*   Updated: 2020/12/01 16:46:35 by ymanzi           ###   ########.fr       */
+/*   Updated: 2020/12/19 11:07:27 by ymanzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ typedef struct	s_glob
 	pthread_mutex_t		*lock;
 	pthread_mutex_t		*quit;
 	pthread_mutex_t		*eat;
-	pthread_t 			*t;
+	pthread_t			*t;
 	struct s_philo		*philo;
 }				t_glob;
 
