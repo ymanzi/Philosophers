@@ -71,6 +71,7 @@ void		lunch_thread(int argc, char **argv, t_glob *gen)
 		pthread_create(&(gen->t[i]), NULL, lunch_philo, gen);
 	}
 	pthread_create(&(gen->t[++i]), NULL, check_death, gen);
+	i = -1;
 	lock_semaphore(gen);
 	lock_semaphore(gen);
 }

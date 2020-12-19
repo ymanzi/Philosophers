@@ -12,7 +12,19 @@
 
 #include "philo.h"
 
-void	check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
+
+int static	all_finished_eat(t_glob *gen, int *f_to_eat)
+{
+	int	ind;
+
+	ind = -1;
+	while (++ind < gen->nb_philo)
+		if (!f_to_eat[ind])
+			return (0);
+	return (1);
+}
+
+void		check_nb_eat(t_glob *gen, int ind, int *f_to_eat)
 {
 	if (gen->argc == 6 && gen->philo[ind].my_meal >= gen->nb_eat)
 	{
@@ -32,7 +44,7 @@ void	*check_death(void *elem)
 	int		f[((t_glob*)elem)->nb_philo];
 
 	g = elem;
-	while (g->alive)
+	while (g->alive && !all_finished_eat(g, f))
 	{
 		usleep(500);
 		g->time_current = get_time() - g->time_start;
@@ -46,7 +58,7 @@ void	*check_death(void *elem)
 				write_message(DEATH_MSG, i + 1, g);
 				return (elem);
 			}
-			check_nb_eat(g, i, f);
+			check_nb_eat(g, i, f); 
 		}
 	}
 	return (elem);

@@ -27,14 +27,18 @@ t_glob		*ft_free(int i, char *str, t_glob *gen)
 {
 	if (i)
 		;
-	if (gen && gen->philo)
-		free(gen->philo);
+	
 	sem_unlink(SEM_WRITE);
 	sem_unlink(SEM_NAME);
 	sem_unlink(SEM_QUIT);
 	sem_unlink(SEM_EAT);
+	
 	if (gen && gen->t)
+	{
 		free(gen->t);
+	}
+	if (gen && gen->philo)
+	 	free(gen->philo);
 	if (gen)
 		free(gen);
 	write(1, str, ft_strlen(str));
@@ -61,7 +65,7 @@ t_glob		*unlink_fct(int size)
 	if ((gen->eat = sem_open(SEM_EAT, O_CREAT, 0660, 1)) == SEM_FAILED)
 		ft_free(2, "Error Semaphore\n", gen);
 	if (!(gen->philo = (t_philo*)malloc(sizeof(t_philo) * size)) ||
-	!(gen->t = (pthread_t*)malloc(sizeof(pthread_t) * (size + 1))))
+	!(gen->t = (pthread_t*)malloc(sizeof(pthread_t) * (size + 2))))
 		return (ft_free(3, "Malloc Error\n", gen));
 	sem_wait(gen->eat);
 	return (gen);

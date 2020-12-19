@@ -50,7 +50,7 @@ void		init_all(int argc, char **argv, t_glob *gen)
 
 void		lunch_thread(int argc, char **argv, t_glob *gen)
 {
-	int			i;
+	int	i;
 
 	i = -1;
 	init_all(argc, argv, gen);

@@ -16,7 +16,7 @@ t_glob		*sleep_fct(int ind, t_glob *gen)
 {
 	gen->philo[ind].start_sleep = gen->philo[ind].start_eat + gen->time_eat;
 	write_message(SLEEP_MSG, ind + 1, gen);
-	while (1)
+	while (gen->alive)
 	{
 		usleep(500);
 		if (gen->time_current - gen->philo[ind].start_sleep
@@ -54,7 +54,7 @@ int			eat_fct(int ind, t_glob *gen)
 	gen->time_current = get_time() - gen->time_start;
 	gen->philo[ind].last_meal = gen->time_current;
 	write_message(EAT_MSG, ind + 1, gen);
-	while (1)
+	while (gen->alive)
 	{
 		usleep(500);
 		if (gen->time_current - gen->philo[ind].start_eat >= (gen->time_eat))

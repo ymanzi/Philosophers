@@ -12,7 +12,7 @@
 
 CC = gcc
 NAME = philo_two
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = #-Wall -Wextra -Werror -g
 SRCS = main.c init.c check.c main_loop.c utils.c write_fct.c
 OBJ = $(SRCS:.c=.o)
 
